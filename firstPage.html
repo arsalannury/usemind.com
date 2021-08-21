@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="هر سوالی داری جوابش تو سایت ما هست">
     <meta name="keywords" content="چی بگم برات ؟ ">
+    <link rel="stylesheet" href="css/style-1.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>www.usemind.com</title>
 </head>
@@ -17,7 +18,12 @@
                 <a class="header-icon" href=""><i class="fas fa-home"></i></a>
                 <a href="#" class="sign-up">ورود / نام نویسی</a>
             </div>
-            <i class='fas fa-toggle-on'></i>
+
+            <div class="search-toggle">
+                <i class='fas fa-toggle-on'></i>
+                <input type="search" name="search" id="search">
+            </div>
+           
             <nav>
                 <ul>
                   <li class="navbar-item-main">محبوب ترین ها
@@ -114,6 +120,7 @@
 
 <!-- HTML main  section !!!!!!!!!!!!!!!!!!!!!-->
     <section class="container-page-main">
+        <!-- side bar page !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
         <aside>
          <img src="aside-logo.png" alt="logo aside" class="img-aside">
          <span class="span-for-aside"><a href="#"  target="_blank" class="link-for-aside"> اتلانتیس در حقیقت وجود دارد؟</a> <i class='far fa-caret-square-left'></i></span>
@@ -128,7 +135,70 @@
          <hr>
          <span class="span-for-aside"><a href="#"  target="_blank" class="link-for-aside">قیمت موبایل افزایش؟ کاهش؟ </a> <i class='far fa-caret-square-left'></i> </span>
         </aside>
+
+<!--content page !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
         <div class="container-page-child">
+
+            <div class="section-content-one">
+        <img class="img-a" src="img-a.png" alt="world-logo" style="width:30%;">
+        <span class="box-text"></span>
+        <span class="box-text"></span>
+        <span class="box-text"></span>
+        <p></p>
+        <button class="button"><i class="fa fa-plus"></i></button>
+            </div>
+
+
+
+        <div class="section-content-two">
+           <img class="img-b" src="img-b.png" alt="family picture" >
+           <span class="information"></span>
+           <span class="icon-information1"></span>
+        </div>
+
+
+        <div class="section-content-th">
+            <img class="img-c" src="img-c.png" alt="computer" >
+            <span class="information"></span>
+            <span class="icon-information"></span>
+        </div>
+
+
+        <div class="section-content-four">
+            <fieldset class="fieldOne">
+           <legend>آشنایی با ما</legend>
+            <form action="actions.txt" method="post">
+                <label for="social">شبکه های اجتماعی</label>
+                <input type="radio" name="social" id="social">
+                <label for="ads">تبلیغات</label>
+                <input type="radio" name="social" id="ads">
+                <label for="youtube">یوتیوب</label>
+                <input type="radio" name="social" id="youtube">
+                <label for="google">گوگل</label>
+                <input type="radio" name="social" id="google">
+            </form>
+         </fieldset>
+
+         <fieldset class="fieldTwo">
+            <legend>وضعیت عضویت شما در سایت</legend>
+         <input class="datalist" size="25" placeholder="روی کادر کلیک کنید" type="text" name="text" list="abc" id="text">
+         <datalist id="abc">
+         <option value="مشترک دایم در سایت هستم">
+         <option value="مشترک در خبرنامه ها هستم">
+         <option value="اشتراک ماهیانه دارم">
+         <option value="عضو عادی بدون اشتراک">
+         </datalist>
+         </fieldset>
+        </div>
+
+
+       <div class="section-content-five">
+           <img class="img-e" src="img-e.png" alt="men-png" >
+           <p></p>
+           <button class="button"><i class="fa fa-plus"></i></button>
+       </div>
+
+
 
         </div>
         <footer>

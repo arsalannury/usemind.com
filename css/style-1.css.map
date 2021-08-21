@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,GAAG,CAAA;EACC,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "../usemind.com/style-1.scss"
+    ],
+    "names": [],
+    "file": "style-1.css"
+}
