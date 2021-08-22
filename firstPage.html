@@ -186,19 +186,19 @@
            <legend>آشنایی با ما</legend>
             <form action="actions.txt" method="post">
                 <label for="social">شبکه های اجتماعی</label>
-                <input type="radio" name="social" id="social">
+                <input type="radio" name="social" id="social" required>
                 <label for="ads">تبلیغات</label>
-                <input type="radio" name="social" id="ads">
+                <input type="radio" name="social" id="ads" required>
                 <label for="youtube">یوتیوب</label>
-                <input type="radio" name="social" id="youtube">
+                <input type="radio" name="social" id="youtube" required>
                 <label for="google">گوگل</label>
-                <input type="radio" name="social" id="google">
-            </form>
+                <input type="radio" name="social" id="google" required>
+           
          </fieldset>
 
          <fieldset class="fieldTwo">
             <legend>وضعیت عضویت شما در سایت</legend>
-         <input class="datalist" size="25" placeholder="روی کادر کلیک کنید" type="text" name="text" list="abc" id="text">
+         <input class="datalist" size="25" placeholder="روی کادر کلیک کنید" type="text" name="text" list="abc" id="text" required>
          <datalist id="abc">
          <option value="مشترک دایم در سایت هستم">
          <option value="مشترک در خبرنامه ها هستم">
@@ -206,6 +206,8 @@
          <option value="عضو عادی بدون اشتراک">
          </datalist>
          </fieldset>
+         <input type="submit" value="ارسال">
+        </form>
         </div>
 
 
