@@ -1,3 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1500px;
+  scroll-behavior: smooth;
+  direction: rtl;
+  font-size: 16px;
+}
+
+body {
+  font-weight: 600;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body .above-page-header-navbar header .first-line-header {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+body .above-page-header-navbar header .first-line-header .header-icon {
+  margin: 11px 0 0 0;
+  color: #001d3d;
+  transition: all 0.6s ease;
+}
+
+body .above-page-header-navbar header .first-line-header .header-icon:hover {
+  color: #ffc300;
+}
+
+body .above-page-header-navbar header .first-line-header .sign-up {
+  margin: 11px 0 0 11px;
+  color: #001d3d;
+  transition: all 0.6s ease;
+}
+
+body .above-page-header-navbar header .first-line-header .sign-up:hover {
+  color: #ffc300;
+}
+
+body .above-page-header-navbar header .first-line-header .logo-site {
+  width: 12%;
+  height: 100px;
+  filter: drop-shadow(0 0 5px #cfd2cd);
+}
+
+body .above-page-header-navbar header .search-toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+}
+
+body .above-page-header-navbar header .search-toggle .toggle {
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 30px;
+  font-size: 1.3em;
+  position: relative;
+}
+
+body .above-page-header-navbar header .search-toggle .toggle:active .tool {
+  display: block;
+}
+
+body .above-page-header-navbar header .search-toggle .toggle:active::before {
+  right: 15px;
+}
+
+body .above-page-header-navbar header .search-toggle .toggle::before {
+  content: "";
+  width: 15px;
+  height: 13px;
+  border-radius: 40%;
+  position: absolute;
+  background-color: #fff;
+  top: 3px;
+  right: 2px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+body .above-page-header-navbar header .search-toggle .toggle::after {
+  content: "";
+  width: 33px;
+  background-color: #000;
+  height: 19px;
+  border-radius: 40%;
+  position: absolute;
+  cursor: pointer;
+}
+
+body .above-page-header-navbar header .search-toggle .toggle .tool {
+  display: none;
+  width: 50px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: -25px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50px;
+}
+
+body .above-page-header-navbar header .search-toggle .search-site {
+  margin: 0 0 0 20px;
+  border-radius: 10px;
+  padding: 3px;
+  font-size: .8em;
+  width: 50px;
+  outline: none;
+  border: none;
+  color: #333533;
+  box-shadow: 1px 3px 5px #cfd2cd;
+  transition: all 0.4s ease;
+}
+
+body .above-page-header-navbar header .search-toggle .search-site:hover {
+  width: 174px;
+}
+
+body .above-page-header-navbar header .search-toggle .search-site:focus {
+  width: 174px;
+}
+
 img {
   width: 30%;
 }

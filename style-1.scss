@@ -1,10 +1,178 @@
-// .container-page-main{
-// aside{
-// .img-aside{
-//     width: 30%;
-// }
-// }
-// }
+@mixin disp($dirc,$just,$align,$wrap) {
+    display: flex;
+    flex-direction:$dirc;
+    justify-content:$just;
+    align-items:$align;
+    flex-wrap:$wrap;
+};
+@mixin transition($trans) {
+    transition:$trans;
+}
+@mixin box-shadow($box) {
+    box-shadow: $box;
+}
+@mixin before-after($width,$height,$radius,$back) {
+    #{$w}:$width;
+    #{$hei}:$height;
+    #{$bord-rad}:$radius;
+    background-color:$back-color;
+    position: absolute;
+    content:"";
+}
+$ma : "margin" ;
+$w : "width" ;
+$font : 'font-size' ;
+$bord-rad : 'border-radius' ;
+$hei : 'height' ;
+$padd : 'padding' ;
+
+@function font-s($number){
+ @return  $number
+};
+
+
+$colors-webSite:(
+color1 : #001d3d ,
+color2 : #003566 ,
+yellow1 : #ffc300 ,
+yellow2 : #ffd60a ,
+yellow3 : #fcf300 ,
+yellow4 : #ffee32 ,
+blue1 : #072ac8 ,
+blue2 : #1e96fc ,
+blue3 : #a2d6f9 ,
+gray-main : #fbfbf2 ,
+gray-first : #e5e6e4 ,
+gray-second : #cfd2cd ,
+gray-y : #d6d6d6 ,
+gray-white : #ededed ,
+gray-x : #efe ,
+text-color : #333533 ,
+);
+*{
+    #{$ma}: 0;
+    #{$padd}: 0;
+    box-sizing: border-box;
+    max-width: 1500px;
+    scroll-behavior: smooth;
+    direction: rtl;
+    #{$font}:16px;
+}
+body{
+    font-weight: 600;
+    font-style: italic; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    a{
+        text-decoration: none;
+    }
+    .above-page-header-navbar{
+        header{
+            .first-line-header{
+                #{$hei}:100px;
+            @include disp(row,space-between,flex-start,nowrap);
+            .header-icon{
+                #{$ma}:11px 0 0 0 ;
+                color: map-get($map: $colors-webSite, $key:color1 );
+                @include transition(all .6s ease);
+                &:hover{
+                 color: map-get($map: $colors-webSite, $key: yellow1);
+                }
+            }
+            .sign-up{
+                #{$ma}:11px 0 0 11px;
+                color: map-get($map: $colors-webSite, $key:color1 );
+                @include transition(all .6s ease);
+                &:hover{
+                 color: map-get($map: $colors-webSite, $key: yellow1);
+                }
+            }
+            .logo-site{
+               #{$w}:12%;
+               #{$hei}:100px;
+               filter: drop-shadow(0 0 5px #cfd2cd);
+            }
+            }
+
+        .search-toggle{
+            @include disp(row,flex-end,flex-end,nowrap);
+            .toggle{
+                #{$w}: 20px;
+                #{$hei}: 20px;
+                #{$ma}:0 0 0 30px;
+                #{$font}:font-s(1.3em);
+                position: relative;
+                &:active{
+                    .tool{
+                        display: block;
+                    }
+                    &::before{
+                        right: 15px;
+                    }
+                }
+                &::before{
+                    @include before-after(15px,13px,40%,#fff);
+                    top:3px;
+                    right:2px;
+                    z-index: 1;
+                    cursor: pointer;
+                }
+               
+                &::after{
+                    @include before-after(33px,19px,40%,#000);
+                    cursor: pointer;
+                }
+                .tool{
+                    display: none;
+                    width: 50px;
+                    text-align: center;
+                    position: absolute;
+                    left: 0;
+                    top: -25px;
+                    background-color: #000;
+                    color: #fff;
+                    border-radius: 50px;
+                }
+            }
+           
+            .search-site{
+                #{$ma}:0 0 0 20px;
+                #{$bord-rad}:10px;
+                #{$padd}:3px;
+                #{$font}:.8em;
+                #{$w}:50px;
+                outline: none;
+                border: none;
+                color: #333533;
+                @include box-shadow(1px 3px 5px #cfd2cd);
+                @include transition(all .4s ease);
+                &:hover{
+                    #{$w}:174px;
+                }
+                &:focus{
+                    #{$w}:174px;
+                }
+                
+            }
+        }
+
+    
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 img{
     width: 30%;
 }
