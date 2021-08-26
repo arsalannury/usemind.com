@@ -15,10 +15,37 @@
     #{$w}:$width;
     #{$hei}:$height;
     #{$bord-rad}:$radius;
-    background-color:$back-color;
+    background-color:$back;
     position: absolute;
     content:"";
 }
+@mixin navbar-item-main() {
+    cursor: pointer;
+    #{$padd}:0 35px 15px 0 ;
+    position: relative;
+    @include transition(all 1s ease);
+     &:hover{
+         color: #ffc300;
+         &::after{
+            content: "\f078" ;
+
+         }
+     }
+   
+   }
+@mixin chevronIcon($top,$left,$right,$size) {
+    &::after{
+        content:'\f053';
+        font-family: 'font awesome 5 free';
+        top:$top;
+        left:$left;
+        right:$right;
+        #{$font}:$size;
+        position: absolute;
+        
+    }
+}
+
 $ma : "margin" ;
 $w : "width" ;
 $font : 'font-size' ;
@@ -29,7 +56,6 @@ $padd : 'padding' ;
 @function font-s($number){
  @return  $number
 };
-
 
 $colors-webSite:(
 color1 : #001d3d ,
@@ -57,16 +83,19 @@ text-color : #333533 ,
     scroll-behavior: smooth;
     direction: rtl;
     #{$font}:16px;
+    
 }
 body{
     font-weight: 600;
     font-style: italic; 
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: map-get($map: $colors-webSite, $key:text-color);
     a{
         text-decoration: none;
     }
     .above-page-header-navbar{
         header{
+            @include box-shadow(0 1px 10px #cfd2cd);
             .first-line-header{
                 #{$hei}:100px;
             @include disp(row,space-between,flex-start,nowrap);
@@ -80,6 +109,7 @@ body{
             }
             .sign-up{
                 #{$ma}:11px 0 0 11px;
+                #{$font}:font-s(.9em);
                 color: map-get($map: $colors-webSite, $key:color1 );
                 @include transition(all .6s ease);
                 &:hover{
@@ -154,12 +184,89 @@ body{
                 
             }
         }
+// navbar webSite styles !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    nav{
+        #{$ma}:0 7px 0 0 ;
+        ul{
+           //$dirc,$just,$align,$wrap
+            .navbar-item-main1{
+              @include navbar-item-main();
+              @include chevronIcon(4.5px,0,20px,.6em);
+              position: relative;
+              &:hover{
+                  .navbar-first-items{
+                      @include disp(column,center,center,nowrap);
+                      @include box-shadow(0 2px 9px #cfd2cd );
+                      position: absolute;
+                      top: 34px;
+                      right:0;
+                      background-color:#fff;
+                      #{$bord-rad}:3px;
+                      #{$w}:150%;
+                      #{$padd}:10px 10px 15px 10px;
 
-    
+                      .first-items{
+                          .first-items-a{
+                            color: map-get($map: $colors-webSite, $key:text-color);
+                          }
+                          i{
+                            #{$font}:font-s(.6em);
+                        }
+                        #{$ma}:10px 0 0 0;
+                        #{$padd}:15px;
+                         @include transition(all .6s ease-in-out);
+                        &:hover{
+                            border-bottom: 1px solid #ffc300 ;
+                            opacity:70%;
+                        }
+                      }
+
+                      .child-items-for-first{
+                          display:none; 
+                      }
+                  }
+              }
+            }
+
+// second column navbar !!!!!!!!!!!!!!!!!!!!!!!!!!!
+            .navbar-item-main2{
+                @include navbar-item-main();
+                @include chevronIcon(4.5px,0,20px,.6em);
+            };
+            .navbar-item-main3{
+                @include navbar-item-main();
+                @include chevronIcon(4.5px,0,20px,.6em);
+            }
+            .navbar-item-main4{
+                @include navbar-item-main();
+                @include chevronIcon(4.5px,0,20px,.6em);
+            }
+
+
+            .navbar-first-items{
+                display: none;
+            }
+            .navbar-second-items{
+                display: none;
+            }
+            .navbar-third-items{
+                display: none;
+            }
+            .navbar-fourth-items{
+                display: none;
+            }
+            @include disp(row,flex-start,center,nowrap);
+            list-style: none;
+
+
+        }
+    }
         }
     }
 }
-
+.container-page-main{
+    margin-top: 130px;
+}
 
 
 
