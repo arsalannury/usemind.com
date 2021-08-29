@@ -197,23 +197,101 @@ body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-fi
 body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items .first-items {
   margin: 10px 0 0 0;
   padding: 15px;
-  transition: all 0.6s ease-in-out;
 }
 
 body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items .first-items .first-items-a {
+  padding: 0 0 15px 0;
   color: #333533;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items .first-items .first-items-a:hover {
+  border-bottom: 1px solid #ffc300;
 }
 
 body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items .first-items i {
   font-size: 0.6em;
+  margin: 0 0 0 2px;
+  color: #ffc300;
 }
 
-body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items .first-items:hover {
+body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items #first-items-parent {
+  position: relative;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items #first-items-parent:hover .child-items-for-first1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: 0 2px 9px #cfd2cd;
+  position: absolute;
+  top: 0;
+  right: 125px;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 150%;
+  padding: 10px 10px 15px 10px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items #first-items-parent:hover .child-items-for-first1::before {
+  content: "\f02e";
+  font-family: 'font awesome 5 free';
+  font-size: 0.8em;
+  color: #000;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items .child-items1 {
+  padding: 15px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items .child-items1 a {
+  padding: 0 0 15px 0;
+  color: #333533;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items .child-items1 a:hover {
   border-bottom: 1px solid #ffc300;
-  opacity: 70%;
 }
 
-body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items .child-items-for-first {
+body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items .child-items-for-first1 {
+  display: none;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items #second-items-parent {
+  position: relative;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items #second-items-parent:hover .child-items-for-first2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: 0 2px 9px #cfd2cd;
+  position: absolute;
+  top: 0;
+  right: 140px;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 120%;
+  padding: 10px 10px 15px 10px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items #second-items-parent:hover .child-items-for-first2::before {
+  content: "\f02e";
+  font-family: 'font awesome 5 free';
+  font-size: 0.8em;
+  color: #000;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main1:hover .navbar-first-items .child-items-for-first2 {
   display: none;
 }
 
@@ -240,6 +318,157 @@ body .above-page-header-navbar header nav ul .navbar-item-main2::after {
   right: 20px;
   font-size: 0.6em;
   position: absolute;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2:hover .navbar-second-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: 0 2px 9px #cfd2cd;
+  position: absolute;
+  top: 34px;
+  right: 0;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 150%;
+  padding: 10px 10px 15px 10px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2:hover .navbar-second-items .second-items {
+  margin: 10px 0 0 0;
+  padding: 15px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2:hover .navbar-second-items .second-items i {
+  font-size: 0.6em;
+  margin: 0 0 0 2px;
+  color: #ffc300;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2:hover .navbar-second-items .second-items .second-items-a {
+  padding: 0 0 15px 0;
+  color: #333533;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2:hover .navbar-second-items .second-items .second-items-a:hover {
+  border-bottom: 1px solid #ffc300;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 #first-items-parent-two {
+  position: relative;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 #first-items-parent-two:hover .child-items-for-second1 {
+  box-shadow: 0 2px 9px #cfd2cd;
+  position: absolute;
+  top: 0;
+  right: 88px;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 200%;
+  padding: 10px 10px 15px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 #first-items-parent-two:hover .child-items-for-second1::before {
+  content: "\f02e";
+  font-family: 'font awesome 5 free';
+  font-size: 0.8em;
+  color: #000;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 .child-items2 {
+  padding: 15px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 .child-items2 a {
+  padding: 0 0 15px 0;
+  color: #333533;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 .child-items2 a:hover {
+  border-bottom: 1px solid #ffc300;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 #second-items-parent-two {
+  position: relative;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 #second-items-parent-two:hover .child-items-for-second2 {
+  box-shadow: 0 2px 9px #cfd2cd;
+  position: absolute;
+  top: 0;
+  right: 110px;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 150%;
+  padding: 10px 10px 15px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 #second-items-parent-two:hover .child-items-for-second2::before {
+  content: "\f02e";
+  font-family: 'font awesome 5 free';
+  font-size: 0.8em;
+  color: #000;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 #third-items-parent-two {
+  position: relative;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 #third-items-parent-two:hover .child-items-for-second3 {
+  box-shadow: 0 2px 9px #cfd2cd;
+  position: absolute;
+  top: 0;
+  right: 88px;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 195%;
+  padding: 10px 10px 15px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 #third-items-parent-two:hover .child-items-for-second3::before {
+  content: "\f02e";
+  font-family: 'font awesome 5 free';
+  font-size: 0.8em;
+  color: #000;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 .child-items-for-second1 {
+  display: none;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 .child-items-for-second2 {
+  display: none;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main2 .child-items-for-second3 {
+  display: none;
 }
 
 body .above-page-header-navbar header nav ul .navbar-item-main3 {

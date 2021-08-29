@@ -45,7 +45,15 @@
         
     }
 }
-
+@mixin navbar-first-items-main-and-child($top,$right,$width) {
+    position: absolute;
+    top:$top;
+    right:$right;
+    background-color:#fff;
+    #{$bord-rad}:3px;
+    #{$w}:$width;
+    #{$padd}:10px 10px 15px 10px;
+}
 $ma : "margin" ;
 $w : "width" ;
 $font : 'font-size' ;
@@ -188,7 +196,6 @@ body{
     nav{
         #{$ma}:0 7px 0 0 ;
         ul{
-           //$dirc,$just,$align,$wrap
             .navbar-item-main1{
               @include navbar-item-main();
               @include chevronIcon(4.5px,0,20px,.6em);
@@ -197,42 +204,201 @@ body{
                   .navbar-first-items{
                       @include disp(column,center,center,nowrap);
                       @include box-shadow(0 2px 9px #cfd2cd );
-                      position: absolute;
-                      top: 34px;
-                      right:0;
-                      background-color:#fff;
-                      #{$bord-rad}:3px;
-                      #{$w}:150%;
-                      #{$padd}:10px 10px 15px 10px;
-
+                      @include navbar-first-items-main-and-child(34px,0,150%);
                       .first-items{
                           .first-items-a{
+                            #{$padd}:0 0 15px 0;
                             color: map-get($map: $colors-webSite, $key:text-color);
+                            
+                            &:hover{
+                                border-bottom: 1px solid #ffc300 ;
+                            }
                           }
                           i{
                             #{$font}:font-s(.6em);
+                            #{$ma}:0 0 0 2px;
+                            color: map-get($map: $colors-webSite, $key:yellow1);
                         }
                         #{$ma}:10px 0 0 0;
                         #{$padd}:15px;
-                         @include transition(all .6s ease-in-out);
+                        
+                       
+                      }
+// style for childs line 1 !!!!!!!!!!!!!!!!!
+
+                   #first-items-parent{
+                       position: relative;
+                   &:hover{
+                    .child-items-for-first1{
+                        &::before{
+                            content:"\f02e";
+                            font-family:'font awesome 5 free';
+                            #{$font}:font-s(.8em);
+                            color: #000;
+                            position: absolute;
+                            right:10px;
+                            top:5px;
+                        }
+                        @include disp(column,center,center,nowrap);
+                        @include box-shadow(0 2px 9px #cfd2cd );
+                        @include navbar-first-items-main-and-child(0,125px,150%);
+                    }
+                   }
+                    }
+                    .child-items1{
+                        #{$padd}:15px;
+                        a{
+                            #{$padd}:0 0 15px 0;
+                        color: map-get($map: $colors-webSite, $key: text-color);
                         &:hover{
                             border-bottom: 1px solid #ffc300 ;
-                            opacity:70%;
                         }
-                      }
-
-                      .child-items-for-first{
+                        }
+                       
+                    }
+                      .child-items-for-first1{
                           display:none; 
                       }
+
+                      #second-items-parent{
+                          position: relative;
+                          &:hover{
+                            .child-items-for-first2{
+                                &::before{
+                                    content:"\f02e";
+                                    font-family:'font awesome 5 free';
+                                    #{$font}:font-s(.8em);
+                                    color: #000;
+                                    position: absolute;
+                                    right:10px;
+                                    top:5px;
+                                }
+                                @include disp(column,center,center,nowrap);
+                                @include box-shadow(0 2px 9px #cfd2cd );
+                                @include navbar-first-items-main-and-child(0,140px,120%);
+                            }
+                           }
+                      }
+                      .child-items-for-first2{
+                        display:none; 
+                    }
                   }
               }
             }
 
+
 // second column navbar !!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
             .navbar-item-main2{
                 @include navbar-item-main();
                 @include chevronIcon(4.5px,0,20px,.6em);
+                &:hover{
+                    .navbar-second-items{
+                        @include disp(column,center,center,nowrap);
+                        @include box-shadow(0 2px 9px #cfd2cd );
+                        @include navbar-first-items-main-and-child(34px,0,150%);
+                       .second-items{
+                        i{
+                            #{$font}:font-s(.6em);
+                            #{$ma}:0 0 0 2px;
+                            color: map-get($map: $colors-webSite, $key:yellow1);
+                        }
+                           .second-items-a{
+                            #{$padd}: 0 0 15px 0;
+                            color: map-get($map: $colors-webSite, $key:text-color);
+                            
+                            &:hover{
+                                border-bottom: 1px solid #ffc300 ;
+                            }
+                        }
+                        #{$ma}:10px 0 0 0;
+                        #{$padd}:15px;
+                       
+                       }
+                    }
+                }
+                #first-items-parent-two{
+                    position: relative;
+                    &:hover{
+                        .child-items-for-second1{
+                            @include box-shadow(0 2px 9px #cfd2cd );
+                            @include navbar-first-items-main-and-child(0,88px,200%);
+                            @include disp(column,center,center,nowrap);
+                            &::before{
+                                content:"\f02e";
+                                font-family:'font awesome 5 free';
+                                #{$font}:font-s(.8em);
+                                color: #000;
+                                position: absolute;
+                                right:10px;
+                                top:5px;
+                            }
+                        } 
+                    }
+                }
+                .child-items2{
+                    #{$padd}:15px;
+                    a{
+                        #{$padd}:0 0 15px 0;
+                    color: map-get($map: $colors-webSite, $key: text-color);
+                    &:hover{
+                        border-bottom: 1px solid #ffc300 ;
+                    }
+                    }   
+                }
+                #second-items-parent-two{
+                    position: relative;
+                    &:hover{
+                        .child-items-for-second2{
+                            @include box-shadow(0 2px 9px #cfd2cd );
+                            @include navbar-first-items-main-and-child(0,110px,150%);
+                            @include disp(column,center,center,nowrap);
+                            &::before{
+                                content:"\f02e";
+                                font-family:'font awesome 5 free';
+                                #{$font}:font-s(.8em);
+                                color: #000;
+                                position: absolute;
+                                right:10px;
+                                top:5px;
+                            }
+                        }
+                    }
+                }
+                #third-items-parent-two{
+                    position: relative;
+                    &:hover{
+                        .child-items-for-second3{
+                            @include box-shadow(0 2px 9px #cfd2cd );
+                            @include navbar-first-items-main-and-child(0,88px,195%);
+                            @include disp(column,center,center,nowrap);
+                            &::before{
+                                content:"\f02e";
+                                font-family:'font awesome 5 free';
+                                #{$font}:font-s(.8em);
+                                color: #000;
+                                position: absolute;
+                                right:10px;
+                                top:5px;
+                            }
+                        }
+                    }
+                }
+
+
+                .child-items-for-second1{
+                    display: none;
+                }
+                .child-items-for-second2{
+                    display: none;
+                }
+                .child-items-for-second3{
+                    display: none;
+                }
             };
+
+// third column navbar !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!            
             .navbar-item-main3{
                 @include navbar-item-main();
                 @include chevronIcon(4.5px,0,20px,.6em);
