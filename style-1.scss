@@ -318,6 +318,7 @@ body{
                        }
                     }
                 }
+// style for childs two !!!!!!!!!!!!!!!!!!!!!!!!!
                 #first-items-parent-two{
                     position: relative;
                     &:hover{
@@ -402,10 +403,113 @@ body{
             .navbar-item-main3{
                 @include navbar-item-main();
                 @include chevronIcon(4.5px,0,20px,.6em);
+                &:hover{
+                    .navbar-third-items{
+                        @include disp(column,center,center,nowrap);
+                        @include box-shadow(0 2px 9px #cfd2cd );
+                        @include navbar-first-items-main-and-child(34px,0,130%);
+                    .third-items{
+                        i{
+                            #{$font}:font-s(.6em);
+                            #{$ma}:0 0 0 2px;
+                            color: map-get($map: $colors-webSite, $key:yellow1);
+                        }
+                           .third-items-a{
+                            #{$padd}: 0 0 15px 0;
+                            color: map-get($map: $colors-webSite, $key:text-color);
+                            
+                            &:hover{
+                                border-bottom: 1px solid #ffc300 ;
+                            }
+                        }
+                        #{$ma}:10px 0 0 0;
+                        #{$padd}:15px;
+                    }
+                    }
+                }
+//style for childs three !!!!!!!!!!!!!!!!!
+
+               #first-item-parent-three{
+                   position: relative;
+                   &:hover{
+                    .child-items-for-third1{
+                        @include disp(column,center,center,nowrap);
+                        @include navbar-first-items-main-and-child(0,97px,170%);
+                        @include box-shadow(0 2px 9px #cfd2cd );
+                        &::before{
+                            content:"\f02e";
+                            font-family:'font awesome 5 free';
+                            #{$font}:font-s(.8em);
+                            color: #000;
+                            position: absolute;
+                            right:10px;
+                            top:5px;
+                        }
+
+                    } 
+                   }
+
+                   .child-items3{
+                    #{$padd}:15px;
+                    a{
+                        #{$padd}:0 0 15px 0;
+                    color: map-get($map: $colors-webSite, $key: text-color);
+                    &:hover{
+                        border-bottom: 1px solid #ffc300 ;
+                    }
+                    }   
+                }
+               }
+
+               #second-item-parent-three{
+                position: relative;
+                &:hover{
+                 .child-items-for-third2{
+                     @include disp(column,center,center,nowrap);
+                     @include navbar-first-items-main-and-child(0,99px,160%);
+                     @include box-shadow(0 2px 9px #cfd2cd );
+                     &::before{
+                         content:"\f02e";
+                         font-family:'font awesome 5 free';
+                         #{$font}:font-s(.8em);
+                         color: #000;
+                         position: absolute;
+                         right:10px;
+                         top:5px;
+                     }
+
+                 } 
+                }
+
+                .child-items3{
+                 #{$padd}:15px;
+                 a{
+                     #{$padd}:0 0 15px 0;
+                 color: map-get($map: $colors-webSite, $key: text-color);
+                 &:hover{
+                     border-bottom: 1px solid #ffc300 ;
+                 }
+                 }   
+             }
             }
+                .child-items-for-third1{
+                    display: none;
+                }
+                .child-items-for-third2{
+                    display: none;
+                }
+               
+            }
+
+// fourth column navbar !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             .navbar-item-main4{
-                @include navbar-item-main();
-                @include chevronIcon(4.5px,0,20px,.6em);
+                cursor: pointer;
+                #{$padd}:0 35px 15px 0 ;
+                position: relative;
+                @include transition(all 1s ease);
+                 &:hover{
+                     color: #ffc300;
+                 }
             }
 
 

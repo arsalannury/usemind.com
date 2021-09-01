@@ -496,6 +496,136 @@ body .above-page-header-navbar header nav ul .navbar-item-main3::after {
   position: absolute;
 }
 
+body .above-page-header-navbar header nav ul .navbar-item-main3:hover .navbar-third-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: 0 2px 9px #cfd2cd;
+  position: absolute;
+  top: 34px;
+  right: 0;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 130%;
+  padding: 10px 10px 15px 10px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3:hover .navbar-third-items .third-items {
+  margin: 10px 0 0 0;
+  padding: 15px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3:hover .navbar-third-items .third-items i {
+  font-size: 0.6em;
+  margin: 0 0 0 2px;
+  color: #ffc300;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3:hover .navbar-third-items .third-items .third-items-a {
+  padding: 0 0 15px 0;
+  color: #333533;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3:hover .navbar-third-items .third-items .third-items-a:hover {
+  border-bottom: 1px solid #ffc300;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 #first-item-parent-three {
+  position: relative;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 #first-item-parent-three:hover .child-items-for-third1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 0;
+  right: 97px;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 170%;
+  padding: 10px 10px 15px 10px;
+  box-shadow: 0 2px 9px #cfd2cd;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 #first-item-parent-three:hover .child-items-for-third1::before {
+  content: "\f02e";
+  font-family: 'font awesome 5 free';
+  font-size: 0.8em;
+  color: #000;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 #first-item-parent-three .child-items3 {
+  padding: 15px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 #first-item-parent-three .child-items3 a {
+  padding: 0 0 15px 0;
+  color: #333533;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 #first-item-parent-three .child-items3 a:hover {
+  border-bottom: 1px solid #ffc300;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 #second-item-parent-three {
+  position: relative;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 #second-item-parent-three:hover .child-items-for-third2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 0;
+  right: 99px;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 160%;
+  padding: 10px 10px 15px 10px;
+  box-shadow: 0 2px 9px #cfd2cd;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 #second-item-parent-three:hover .child-items-for-third2::before {
+  content: "\f02e";
+  font-family: 'font awesome 5 free';
+  font-size: 0.8em;
+  color: #000;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 #second-item-parent-three .child-items3 {
+  padding: 15px;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 #second-item-parent-three .child-items3 a {
+  padding: 0 0 15px 0;
+  color: #333533;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 #second-item-parent-three .child-items3 a:hover {
+  border-bottom: 1px solid #ffc300;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 .child-items-for-third1 {
+  display: none;
+}
+
+body .above-page-header-navbar header nav ul .navbar-item-main3 .child-items-for-third2 {
+  display: none;
+}
+
 body .above-page-header-navbar header nav ul .navbar-item-main4 {
   cursor: pointer;
   padding: 0 35px 15px 0;
@@ -505,20 +635,6 @@ body .above-page-header-navbar header nav ul .navbar-item-main4 {
 
 body .above-page-header-navbar header nav ul .navbar-item-main4:hover {
   color: #ffc300;
-}
-
-body .above-page-header-navbar header nav ul .navbar-item-main4:hover::after {
-  content: "\f078";
-}
-
-body .above-page-header-navbar header nav ul .navbar-item-main4::after {
-  content: '\f053';
-  font-family: 'font awesome 5 free';
-  top: 4.5px;
-  left: 0;
-  right: 20px;
-  font-size: 0.6em;
-  position: absolute;
 }
 
 body .above-page-header-navbar header nav ul .navbar-first-items {
