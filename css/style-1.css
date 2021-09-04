@@ -751,7 +751,7 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
-  box-shadow: 0 1px 5px #003566;
+  box-shadow: 0 1px 1px #003566;
   background-color: #cfd2cd;
   border-radius: 5px;
   margin: 14px 10px 10px 10px;
@@ -845,15 +845,73 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   font-size: 1em;
 }
 
+.container-page-main .container-page-child .section-content-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  transition: all 1s ease;
+  background-color: #001d3d;
+  width: 50%;
+  height: 30vh;
+  margin: 0 15px 0 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container-page-main .container-page-child .section-content-two:hover {
+  transform: translateX(-100px);
+}
+
+.container-page-main .container-page-child .section-content-two:hover .captions {
+  color: #ffc300;
+}
+
+.container-page-main .container-page-child .section-content-two .img-b {
+  width: 42%;
+}
+
+.container-page-main .container-page-child .section-content-two .captions {
+  transition: all 0.6s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  align-self: flex-end;
+  color: #fff;
+  padding: 10px;
+  opacity: 90%;
+}
+
+.container-page-main .container-page-child .section-content-two .captions::before {
+  font-size: .9em;
+  color: #ffc300;
+  content: '\f02c';
+  font-family: 'font awesome 5 free';
+  position: absolute;
+  top: -142px;
+  right: 260px;
+}
+
+.container-page-main .container-page-child .section-content-two .captions .information {
+  font-size: .9em;
+  order: 3;
+}
+
+.container-page-main .container-page-child .section-content-two .captions .date {
+  font-size: .7em;
+  order: 2;
+  margin: 0 0 5px 0;
+}
+
 .container-page-main footer {
   background-color: #fff;
   height: 25vh;
   grid-column: 1/-1;
   box-shadow: 0 -3px 5px #fff;
-}
-
-.img-b {
-  width: 20%;
 }
 
 .img-c {

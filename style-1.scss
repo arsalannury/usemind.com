@@ -600,7 +600,7 @@ aside{
 .boxes{
     position:relative;
     @include disp(row,space-around,center,nowrap);
-    @include box-shadow(0 1px 5px #003566);
+    @include box-shadow(0 1px 1px #003566);
     background-color:#cfd2cd;
     #{$bord-rad}: 5px;
     #{$ma}:14px 10px 10px 10px;
@@ -671,6 +671,54 @@ i{
   }
 }
 }
+
+.section-content-two{
+    @include disp(row,flex-start,flex-start,nowrap);
+    @include transition(all 1s ease);
+    background-color:#001d3d;
+    #{$w}:50%;
+    #{$hei}:30vh;
+    #{$ma}:0 15px 0 0 ;
+    #{$bord-rad}:10px;
+    cursor:pointer;
+&:hover{
+    transform:translateX(-100px);
+ .captions{
+     color:#ffc300;;
+ }
+}
+    .img-b{
+        #{$w}:42%;
+    }
+.captions{
+&::before{
+    #{$font}:.9em;
+    color:map-get($map: $colors-webSite, $key:yellow1);
+    content:'\f02c';
+    font-family:'font awesome 5 free';
+    position:absolute;
+    top:-142px;
+    right:260px;
+
+}
+    @include transition(all .6s ease);
+    position: relative;
+    @include disp(column,space-around,flex-start,nowrap);
+    align-self:flex-end;
+    color: #fff;
+    #{$padd}:10px;
+    opacity:90%;
+.information{
+    #{$font}:.9em;
+    order:3;
+}
+.date{
+    #{$font}:.7em;
+    order:2;
+    #{$ma}:0 0 5px 0;
+}
+}
+}
 }
 
 
@@ -684,7 +732,7 @@ footer{
 
 
 
-.img-b{width: 20%;}
+
 .img-c{width: 20%;}
 .img-e{width: 20%;}
 
