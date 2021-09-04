@@ -54,6 +54,15 @@
     #{$w}:$width;
     #{$padd}:10px 10px 15px 10px;
 }
+@mixin before-captions($right) {
+    #{$font}:.9em;
+    color:map-get($map: $colors-webSite, $key:yellow1);
+    content:'\f02c';
+    font-family:'font awesome 5 free';
+    position:absolute;
+    top:-142px;
+    right:$right;
+}
 $ma : "margin" ;
 $w : "width" ;
 $font : 'font-size' ;
@@ -692,18 +701,52 @@ i{
     }
 .captions{
 &::before{
-    #{$font}:.9em;
-    color:map-get($map: $colors-webSite, $key:yellow1);
-    content:'\f02c';
-    font-family:'font awesome 5 free';
-    position:absolute;
-    top:-142px;
-    right:260px;
-
+    @include before-captions(260px);
 }
     @include transition(all .6s ease);
-    position: relative;
     @include disp(column,space-around,flex-start,nowrap);
+    position: relative;
+    align-self:flex-end;
+    color: #fff;
+    #{$padd}:10px;
+    opacity:90%;
+.information{
+    #{$font}:.9em;
+    order:3;
+}
+.date{
+    #{$font}:.7em;
+    order:2;
+    #{$ma}:0 0 5px 0;
+}
+}
+}
+
+.section-content-th{
+    @include disp(row,flex-start,flex-start,nowrap);
+    @include transition(all 1s ease);
+    background-color:#001d3d;
+    #{$w}:50%;
+    #{$hei}:30vh;
+    #{$ma}:20px auto 0 0 ;
+    #{$bord-rad}:10px;
+    cursor:pointer;
+&:hover{
+    transform:translateX(100px);
+ .captions{
+     color:#ffc300;;
+ }
+}
+    .img-c{
+        #{$w}:38%;
+    }
+.captions{
+&::before{
+    @include before-captions(280px);
+}
+    @include transition(all .6s ease);
+    @include disp(column,space-around,flex-start,nowrap);
+    position: relative;
     align-self:flex-end;
     color: #fff;
     #{$padd}:10px;
