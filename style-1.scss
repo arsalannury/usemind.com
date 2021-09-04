@@ -8,7 +8,7 @@
 @mixin transition($trans) {
     transition:$trans;
 }
-@mixin box-shadow($box) {
+@mixin box-shadow($box...) {
     box-shadow: $box;
 }
 @mixin before-after($width,$height,$radius,$back) {
@@ -77,7 +77,7 @@ blue2 : #1e96fc ,
 blue3 : #a2d6f9 ,
 gray-main : #fbfbf2 ,
 gray-first : #e5e6e4 ,
-gray-second : #cfd2cd ,
+gray-second : #cfd2cd,
 gray-y : #d6d6d6 ,
 gray-white : #ededed ,
 gray-x : #efe ,
@@ -98,12 +98,14 @@ body{
     font-style: italic; 
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: map-get($map: $colors-webSite, $key:text-color);
+    background-color:#cfd2cd;
     a{
         text-decoration: none;
     }
     .above-page-header-navbar{
         header{
-            @include box-shadow(0 1px 10px #cfd2cd);
+            background-color:#fff;
+            @include box-shadow(0 3px 10px #fff);
             .first-line-header{
                 #{$hei}:100px;
             @include disp(row,space-between,flex-start,nowrap);
@@ -127,7 +129,7 @@ body{
             .logo-site{
                #{$w}:12%;
                #{$hei}:100px;
-               filter: drop-shadow(0 0 5px #cfd2cd);
+               filter: drop-shadow(0 0 5px #eee);
             }
             }
 
@@ -181,7 +183,7 @@ body{
                 outline: none;
                 border: none;
                 color: #333533;
-                @include box-shadow(1px 3px 5px #cfd2cd);
+                @include box-shadow(1px 3px 5px #eee);
                 @include transition(all .4s ease);
                 &:hover{
                     #{$w}:174px;
@@ -194,9 +196,12 @@ body{
         }
 // navbar webSite styles !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     nav{
+        background-color:#fff;
         #{$ma}:0 7px 0 0 ;
         ul{
+            background-color:#fff;
             .navbar-item-main1{
+                z-index: 10;
               @include navbar-item-main();
               @include chevronIcon(4.5px,0,20px,.6em);
               position: relative;
@@ -291,6 +296,7 @@ body{
 
 
             .navbar-item-main2{
+                z-index: 10;
                 @include navbar-item-main();
                 @include chevronIcon(4.5px,0,20px,.6em);
                 &:hover{
@@ -401,13 +407,14 @@ body{
 
 // third column navbar !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!            
             .navbar-item-main3{
+                z-index: 10;
                 @include navbar-item-main();
                 @include chevronIcon(4.5px,0,20px,.6em);
                 &:hover{
                     .navbar-third-items{
                         @include disp(column,center,center,nowrap);
                         @include box-shadow(0 2px 9px #cfd2cd );
-                        @include navbar-first-items-main-and-child(34px,0,130%);
+                        @include navbar-first-items-main-and-child(34px,0,131%);
                     .third-items{
                         i{
                             #{$font}:font-s(.6em);
@@ -466,7 +473,7 @@ body{
                 &:hover{
                  .child-items-for-third2{
                      @include disp(column,center,center,nowrap);
-                     @include navbar-first-items-main-and-child(0,99px,160%);
+                     @include navbar-first-items-main-and-child(0,102px,160%);
                      @include box-shadow(0 2px 9px #cfd2cd );
                      &::before{
                          content:"\f02e";
@@ -534,12 +541,152 @@ body{
         }
     }
 }
+// HTML main section !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 .container-page-main{
-    margin-top: 130px;
+    margin-top: 50px;
+    display:grid;
+    grid-template-columns:0.6fr 3fr;
+    gap:15px;
+aside{
+    background-color:#fff;
+ @include box-shadow(-3px 0 5px #fff,3px 0 5px #fff);
+ @include disp(column,flex-start,center,nowrap);
+ #{$ma}: 0 10px 0 0;
+ #{$bord-rad}:3px;
+ .img-aside{
+     #{$w}:100%;
+     #{$ma}:0 0 20px 0 ;
+     filter:drop-shadow(0 3px 5px #fff);
+ }
+ .span-aside{
+    @include disp(column,flex-start,center,nowrap);
+ .span-for-aside{
+    #{$padd}:50px 8px ;
+    .link-for-aside{
+        #{$padd}-bottom:8px;
+    color: map-get($map:$colors-webSite, $key:text-color);
+    @include transition(all .6s ease);
+        &:hover{
+           opacity:80%;
+           border-bottom:.5px solid #ffc300;
+            }
+    }
+    i{
+     #{$ma}:0 0 0 2px;
+     color: map-get($map: $colors-webSite, $key:yellow1);
+    }
+  }
+ }
+}
+.container-page-child{
+    background-color:#fff;
+ @include disp(column,space-around,flex-start,nowrap);
+ @include box-shadow(-3px 0 5px #fff,3px 0 5px #fff);
+ #{$bord-rad}:3px;
+ text-align:justify;
+ #{$ma}:0 0 0 10px;
+
+.section-content-one{
+    @include disp(column,flex-start,center,nowrap);
+    #{$padd}:15px;
+.img-a{
+    #{$w}:60%;
+    #{$hei}:50vh;
+    border-left:10px double #003566;
+    border-right:10px double #003566;
+    #{$bord-rad}:8px;
+    filter:drop-shadow(0 2px 5px #cfd2cd);
+}
+.boxes{
+    position:relative;
+    @include disp(row,space-around,center,nowrap);
+    @include box-shadow(0 1px 5px #003566);
+    background-color:#cfd2cd;
+    #{$bord-rad}: 5px;
+    #{$ma}:14px 10px 10px 10px;
+
+.box-text1{
+    position:relative;
+    @include disp(column,center,center,nowrap);
+    #{$padd}:10px;
+&::after{
+    content:' ';
+    position:absolute;
+    #{$w}:1px;
+    #{$hei}:50px;
+    background-color:#000;
+    right:324px;
+}
+}
+.box-text2{
+    @include disp(column,center,center,nowrap);
+    #{$padd}:10px;
+}
+.box-text3{
+    position: relative;
+    @include disp(column,center,center,nowrap);
+    #{$padd}:10px;
+&::before{
+    content:' ';
+    position:absolute;
+    #{$w}:1px;
+    #{$hei}:50px;
+    background-color:#000;
+    left:326px;
+}
+}
+}
+.p-content-one{
+    line-height:30px;
+    #{$padd}:15px;
+}
+.button{
+    align-self:flex-start;
+    outline:none;
+    border:none;
+    #{$padd}:8px;
+    #{$font}:.9em;
+    #{$bord-rad}:5px;
+    @include box-shadow(0 3px 1px #cfd2cd);
+    @include transition(all .6s ease);
+&:hover{
+    @include box-shadow(0 1px 3px #ffc300);
+    background-color:#cfd2cd;
+    .a-button{
+        font-weight: bold;
+        letter-spacing:-0.5px;
+    }
+   i{
+       color:map-get($map: $colors-webSite, $key:yellow1);
+       transform:rotateZ(40deg);
+   }
+   }
+.a-button{
+    #{$font}:font-s(.9em);
+    color:map-get($map:$colors-webSite, $key:text-color);
+}
+i{
+@include transition(all .6s ease);
+ #{$font}:1em;
+  }
+}
+}
+}
+
+
+footer{
+    background-color:#fff;
+   #{$hei}:25vh;
+    grid-column:1/-1;
+    @include box-shadow(0 -3px 5px #fff);
+}
 }
 
 
 
+.img-b{width: 20%;}
+.img-c{width: 20%;}
+.img-e{width: 20%;}
 
 
 
@@ -547,9 +694,3 @@ body{
 
 
 
-
-
-
-img{
-    width: 30%;
-}
