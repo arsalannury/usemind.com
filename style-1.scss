@@ -762,6 +762,22 @@ i{
 }
 }
 }
+
+.section-content-four{
+@include disp(row,center,center,nowrap);
+@include box-shadow(3px 3px 10px #cfd2cd);
+#{$ma}:40px 20px 20px 20px;
+#{$w}:90%;
+#{$bord-rad}:5px;
+form{
+    @include disp(row,center,center,nowrap);
+    #{$w}:90%;
+    #{$padd}:10px;
+    input{
+      #{$ma}:0 0 0 20px;
+    }
+}
+}
 }
 
 

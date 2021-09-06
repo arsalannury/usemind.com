@@ -969,6 +969,32 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   margin: 0 0 5px 0;
 }
 
+.container-page-main .container-page-child .section-content-four {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: 3px 3px 10px #cfd2cd;
+  margin: 40px 20px 20px 20px;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.container-page-main .container-page-child .section-content-four form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 90%;
+  padding: 10px;
+}
+
+.container-page-main .container-page-child .section-content-four form input {
+  margin: 0 0 0 20px;
+}
+
 .container-page-main footer {
   background-color: #fff;
   height: 25vh;

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -132,6 +134,7 @@
          <span class="span-for-aside"> <i class='far fa-caret-square-left'></i> <a href="#" target="_blank" class="link-for-aside">تجربه گرایی کانت چه بود </a></span>
          <span class="span-for-aside"> <i class='far fa-caret-square-left'></i> <a href="#"  target="_blank" class="link-for-aside">قیمت موبایل افزایش؟ کاهش؟ </a></span>
         </div>
+        <div id='map' style='width: 195px; height: 500px;'></div>
         </aside>
 
 <!--content page !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
@@ -177,8 +180,6 @@
 
 
         <div class="section-content-four">
-            <fieldset class="fieldOne">
-           <legend>آشنایی با ما</legend>
             <form action="actions.txt" method="post">
                 <label for="social">شبکه های اجتماعی</label>
                 <input type="radio" name="social" id="social" required>
@@ -189,10 +190,7 @@
                 <label for="google">گوگل</label>
                 <input type="radio" name="social" id="google" required>
            
-         </fieldset>
 
-         <fieldset class="fieldTwo">
-            <legend>وضعیت عضویت شما در سایت</legend>
          <input class="datalist" size="25" placeholder="روی کادر کلیک کنید" type="text" name="text" list="abc" id="text" required>
          <datalist id="abc">
          <option value="مشترک دایم در سایت هستم">
@@ -200,7 +198,6 @@
          <option value="اشتراک ماهیانه دارم">
          <option value="عضو عادی بدون اشتراک">
          </datalist>
-         </fieldset>
          <input type="submit" value="ارسال">
         </form>
         </div>
@@ -242,7 +239,7 @@
 
         <div class="footer-text">
             <h2>توضیحات سایت</h2>
-            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم 
+            <p  id="ff" >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم 
             از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها 
             و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
             است و برای شرایط فعلی تکنولوژی مورد نیاز </p>
@@ -253,5 +250,6 @@
         </div>
         </footer>
     </section>
+    <script src="showlocation.js"></script>
 </body>
 </html>
