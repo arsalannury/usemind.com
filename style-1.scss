@@ -681,10 +681,11 @@ i{
 }
 }
 
+
 .section-content-two{
     @include disp(row,flex-start,flex-start,nowrap);
     @include transition(all 1s ease);
-    background-color:#001d3d;
+    background-color:map-get($map:$colors-webSite, $key:color1);
     #{$w}:50%;
     #{$hei}:30vh;
     #{$ma}:0 15px 0 0 ;
@@ -725,7 +726,7 @@ i{
 .section-content-th{
     @include disp(row,flex-start,flex-start,nowrap);
     @include transition(all 1s ease);
-    background-color:#001d3d;
+    background-color:map-get($map:$colors-webSite, $key:color1);
     #{$w}:50%;
     #{$hei}:30vh;
     #{$ma}:20px auto 0 0 ;
@@ -763,10 +764,30 @@ i{
 }
 }
 
+hr{
+    #{$w}:90%;
+    #{$hei}:4%;
+    #{$ma}:30px auto 0 auto;
+    #{$bord-rad}:50%;
+    border: none;
+    outline:none;
+    background-color:map-get($map:$colors-webSite, $key:yellow1);
+}
+
+.hr1{
+    #{$w}:90%;
+    #{$hei}:4%;
+    #{$ma}:10px auto 20px auto;
+    #{$bord-rad}:50%;
+    border: none;
+    outline:none;
+    background-color:map-get($map:$colors-webSite, $key:yellow1);
+}
+
 .section-content-four{
 @include disp(row,center,center,nowrap);
 @include box-shadow(3px 3px 10px #cfd2cd);
-#{$ma}:40px 20px 20px 20px;
+#{$ma}:30px 20px 20px 20px;
 #{$w}:90%;
 #{$bord-rad}:5px;
 form{
@@ -776,6 +797,34 @@ form{
     input{
       #{$ma}:0 0 0 20px;
     }
+   input[type = submit]{
+    cursor: pointer;
+    outline:none;
+    border:none;
+    #{$padd}:8px;
+    #{$font}:.9em;
+    #{$bord-rad}:5px;
+    @include box-shadow(0 3px 1px #cfd2cd);
+    @include transition(all .6s ease);
+    &:hover{
+        @include box-shadow(0 1px 3px #ffc300);
+        background-color:#cfd2cd;
+    }
+   }
+
+.datalist{
+  #{$font}:font-s(.8em);
+  #{$padd}:5px;
+  #{$bord-rad}:3px;
+  @include box-shadow(1px 1px 1px #cfd2cd,-1px -1px 1px #cfd2cd);
+  @include transition(all .5s ease);
+  border:none;
+  outline:none;
+  &:focus{
+    @include box-shadow(2px 2px 6px #cfd2cd);
+    #{$bord-rad}:7px;
+  }
+   }
 }
 }
 }
