@@ -810,7 +810,7 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
 }
 
 .container-page-main .container-page-child .section-content-one .button {
-  align-self: flex-start;
+  align-self: flex-end;
   outline: none;
   border: none;
   padding: 8px;
@@ -996,7 +996,7 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   align-items: center;
   flex-wrap: nowrap;
   box-shadow: 3px 3px 10px #cfd2cd;
-  margin: 30px 20px 20px 20px;
+  margin: 30px 55px 20px 20px;
   width: 90%;
   border-radius: 5px;
 }
@@ -1046,15 +1046,66 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   border-radius: 7px;
 }
 
+.container-page-main .section-content-five {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 15px;
+}
+
+.container-page-main .section-content-five .five-content-p {
+  line-height: 35px;
+  padding: 15px;
+}
+
+.container-page-main .section-content-five .img-e {
+  align-self: flex-start;
+  filter: drop-shadow(0 2px 5px #cfd2cd);
+}
+
+.container-page-main .section-content-five .button {
+  align-self: flex-end;
+  outline: none;
+  border: none;
+  padding: 8px;
+  font-size: .9em;
+  border-radius: 5px;
+  box-shadow: 0 3px 1px #cfd2cd;
+  transition: all 0.6s ease;
+}
+
+.container-page-main .section-content-five .button:hover {
+  box-shadow: 0 1px 3px #ffc300;
+  background-color: #cfd2cd;
+}
+
+.container-page-main .section-content-five .button:hover .a-button {
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.container-page-main .section-content-five .button:hover i {
+  color: #ffc300;
+  transform: rotateZ(40deg);
+}
+
+.container-page-main .section-content-five .button .a-button {
+  font-size: 0.9em;
+  color: #333533;
+}
+
+.container-page-main .section-content-five .button i {
+  transition: all 0.6s ease;
+  font-size: 1em;
+}
+
 .container-page-main footer {
   background-color: #fff;
   height: 25vh;
   grid-column: 1/-1;
   box-shadow: 0 -3px 5px #fff;
-}
-
-.img-c {
-  width: 20%;
 }
 
 .img-e {

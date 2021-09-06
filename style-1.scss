@@ -63,6 +63,36 @@
     top:-142px;
     right:$right;
 }
+@mixin button-styles() {
+    align-self:flex-end;
+    outline:none;
+    border:none;
+    #{$padd}:8px;
+    #{$font}:.9em;
+    #{$bord-rad}:5px;
+    @include box-shadow(0 3px 1px #cfd2cd);
+    @include transition(all .6s ease);
+&:hover{
+    @include box-shadow(0 1px 3px #ffc300);
+    background-color:#cfd2cd;
+    .a-button{
+        font-weight: bold;
+        letter-spacing:-0.5px;
+    }
+   i{
+       color:map-get($map: $colors-webSite, $key:yellow1);
+       transform:rotateZ(40deg);
+   }
+   }
+.a-button{
+    #{$font}:font-s(.9em);
+    color:map-get($map:$colors-webSite, $key:text-color);
+}
+i{
+@include transition(all .6s ease);
+ #{$font}:1em;
+  }
+}
 $ma : "margin" ;
 $w : "width" ;
 $font : 'font-size' ;
@@ -650,37 +680,9 @@ aside{
     #{$padd}:15px;
 }
 .button{
-    align-self:flex-start;
-    outline:none;
-    border:none;
-    #{$padd}:8px;
-    #{$font}:.9em;
-    #{$bord-rad}:5px;
-    @include box-shadow(0 3px 1px #cfd2cd);
-    @include transition(all .6s ease);
-&:hover{
-    @include box-shadow(0 1px 3px #ffc300);
-    background-color:#cfd2cd;
-    .a-button{
-        font-weight: bold;
-        letter-spacing:-0.5px;
-    }
-   i{
-       color:map-get($map: $colors-webSite, $key:yellow1);
-       transform:rotateZ(40deg);
-   }
-   }
-.a-button{
-    #{$font}:font-s(.9em);
-    color:map-get($map:$colors-webSite, $key:text-color);
-}
-i{
-@include transition(all .6s ease);
- #{$font}:1em;
-  }
+   @include button-styles();
 }
 }
-
 
 .section-content-two{
     @include disp(row,flex-start,flex-start,nowrap);
@@ -787,7 +789,7 @@ hr{
 .section-content-four{
 @include disp(row,center,center,nowrap);
 @include box-shadow(3px 3px 10px #cfd2cd);
-#{$ma}:30px 20px 20px 20px;
+#{$ma}:30px 55px 20px 20px;
 #{$w}:90%;
 #{$bord-rad}:5px;
 form{
@@ -829,6 +831,21 @@ form{
 }
 }
 
+.section-content-five{
+    @include disp(column,center,center,nowrap);
+    #{$padd}:15px;
+    .five-content-p{
+        line-height:35px;
+        #{$padd}:15px;
+    }
+    .img-e{
+        align-self:flex-start;
+        filter:drop-shadow(0 2px 5px #cfd2cd);
+    }
+    .button{
+    @include button-styles();
+    }
+}
 
 footer{
     background-color:#fff;
@@ -840,8 +857,6 @@ footer{
 
 
 
-
-.img-c{width: 20%;}
 .img-e{width: 20%;}
 
 
