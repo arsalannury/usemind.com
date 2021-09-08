@@ -54,13 +54,13 @@
     #{$w}:$width;
     #{$padd}:10px 10px 15px 10px;
 }
-@mixin before-captions($right) {
+@mixin before-captions($right,$top) {
     #{$font}:.9em;
     color:map-get($map: $colors-webSite, $key:yellow1);
     content:'\f02c';
     font-family:'font awesome 5 free';
     position:absolute;
-    top:-142px;
+    top:$top;
     right:$right;
 }
 @mixin button-styles() {
@@ -92,6 +92,15 @@ i{
 @include transition(all .6s ease);
  #{$font}:1em;
   }
+}
+@mixin hr-style($margin) {
+    #{$w}:90%;
+    #{$hei}:4%;
+    #{$ma}:$margin;
+    #{$bord-rad}:50%;
+    border: none;
+    outline:none;
+    background-color:map-get($map:$colors-webSite, $key:yellow1);
 }
 $ma : "margin" ;
 $w : "width" ;
@@ -704,7 +713,7 @@ aside{
     }
 .captions{
 &::before{
-    @include before-captions(260px);
+    @include before-captions(260px,-142px);
 }
     @include transition(all .6s ease);
     @include disp(column,space-around,flex-start,nowrap);
@@ -745,7 +754,7 @@ aside{
     }
 .captions{
 &::before{
-    @include before-captions(280px);
+    @include before-captions(280px,-130px);
 }
     @include transition(all .6s ease);
     @include disp(column,space-around,flex-start,nowrap);
@@ -767,23 +776,11 @@ aside{
 }
 
 hr{
-    #{$w}:90%;
-    #{$hei}:4%;
-    #{$ma}:30px auto 0 auto;
-    #{$bord-rad}:50%;
-    border: none;
-    outline:none;
-    background-color:map-get($map:$colors-webSite, $key:yellow1);
+    @include hr-style(30px auto 0 auto);
 }
 
 .hr1{
-    #{$w}:90%;
-    #{$hei}:4%;
-    #{$ma}:10px auto 20px auto;
-    #{$bord-rad}:50%;
-    border: none;
-    outline:none;
-    background-color:map-get($map:$colors-webSite, $key:yellow1);
+    @include hr-style(10px auto 25px auto);
 }
 
 .section-content-four{
@@ -841,6 +838,7 @@ form{
     .img-e{
         align-self:flex-start;
         filter:drop-shadow(0 2px 5px #cfd2cd);
+        #{$w}:20%;
     }
     .button{
     @include button-styles();
@@ -848,16 +846,90 @@ form{
 }
 
 footer{
+    @include disp(column,flex-start,flex-start,nowrap);
     background-color:#fff;
-   #{$hei}:25vh;
+   #{$hei}:20vh;
     grid-column:1/-1;
     @include box-shadow(0 -3px 5px #fff);
+
+
+    .links{
+    @include disp(row,space-between,center,nowrap);
+    .link1{
+        @include disp(row,space-between,center,nowrap);
+        #{$w}:70%;
+        #{$ma}:0 10px 0 0;
+    a{
+        color:#888;
+       @include transition(all .6s ease);
+       &:hover{
+           color:map-get($map:$colors-webSite, $key:text-color);
+       }
+    }
+
+    h3{
+        cursor:none;
+        @include transition(all .5s ease-out);
+        position: relative;
+        &::after{
+            content:'\f100';
+            @include transition(all .5s ease-out);
+            font-family:'font awesome 5 free';
+            position: absolute;
+            right:50px;
+            #{$font}:.9em;
+            color: map-get($map: $colors-webSite, $key:yellow1);
+        }
+        &:hover{
+                &::after{
+                     transform:translateX(-10px);
+                }
+        }
+    }
+    }
+        .link2{
+            #{$w}:30%;
+            .standard-logo{
+                #{$w}:15%;
+                #{$ma}:0 80% 0 0;
+            }
+        }
+    }
+
+
+    .standard{
+        @include disp(row,space-between,center,nowrap);
+        #{$w}:100%;
+        #{$ma}:50px 0 0 0 ;
+    .standard-cont{
+        #{$ma}:0 10px 0 0 ;
+        .standard-a{
+            #{$font}:font-s(.9em);
+            color:#888;
+        }
+    }
+    .icons{
+        #{$ma}:0 0 0 10px;
+        a{
+            i{
+                color:#888;
+                #{$ma}:0 10px 0 0 ;
+                @include transition(all .5s ease);
+                &:hover{
+                    color: map-get($map: $colors-webSite, $key:yellow1);
+                    transform:translateY(-3px);
+                }
+            }
+          
+        }
+    }
+    }
 }
+
+
 }
 
 
-
-.img-e{width: 20%;}
 
 
 
