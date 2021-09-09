@@ -667,6 +667,104 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   gap: 15px;
 }
 
+.container-page-main .container-page-child2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #fff;
+  box-shadow: -3px 0 5px #fff, 3px 0 5px #fff;
+  border-radius: 3px;
+  text-align: justify;
+  margin: 0 0 0 10px;
+}
+
+.container-page-main .container-page-child2 .loginform {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 25px 25px 50px #949494, -25px -25px 50px #ffffff;
+  height: 60%;
+  width: 50%;
+}
+
+.container-page-main .container-page-child2 .loginform .element1 {
+  margin: 10px 0 0 0;
+  font-size: 1.1em;
+  transition: all 0.6s ease;
+}
+
+.container-page-main .container-page-child2 .loginform .element1 .sign-up {
+  display: none;
+}
+
+.container-page-main .container-page-child2 .loginform .element1:hover {
+  color: #003566;
+}
+
+.container-page-main .container-page-child2 .loginform .element1:hover .sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #001d3d;
+  padding: 15px;
+  margin: 15px 0 0 0;
+}
+
+.container-page-main .container-page-child2 .loginform .element1:hover .sign-up label {
+  margin: 40px 0 10px 0;
+  color: #fff;
+}
+
+.container-page-main .container-page-child2 .loginform .element1:hover .sign-up input[type=submit] {
+  margin: 30px 0 0 0;
+}
+
+.container-page-main .container-page-child2 .loginform .element1:hover .sign-up #chek {
+  margin: 10px 0 0 0;
+}
+
+.container-page-main .container-page-child2 .loginform .element2 {
+  margin: 10px 0 0 0;
+  font-size: 1.1em;
+  transition: all 0.6s ease;
+}
+
+.container-page-main .container-page-child2 .loginform .element2 .sign-in {
+  display: none;
+}
+
+.container-page-main .container-page-child2 .loginform .element2:hover {
+  color: #ffc300;
+}
+
+.container-page-main .container-page-child2 .loginform .element2:hover .sign-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #ffc300;
+  padding: 15px;
+  margin: 15px 0 0 0;
+}
+
+.container-page-main .container-page-child2 .loginform .element2:hover .sign-in label {
+  margin: 40px 0 10px 0;
+  color: #fff;
+}
+
+.container-page-main .container-page-child2 .loginform .element2:hover .sign-in input[type=submit] {
+  margin: 30px 0 0 0;
+}
+
 .container-page-main aside {
   background-color: #fff;
   box-shadow: -3px 0 5px #fff, 3px 0 5px #fff;

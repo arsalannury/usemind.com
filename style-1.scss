@@ -131,6 +131,7 @@ gray-white : #ededed ,
 gray-x : #efe ,
 text-color : #333533 ,
 );
+
 *{
     #{$ma}: 0;
     #{$padd}: 0;
@@ -591,6 +592,7 @@ body{
 }
 // HTML main section !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 .container-page-main{
+    @import '_content-page-two.scss';
     margin-top: 50px;
     display:grid;
     grid-template-columns:0.6fr 3fr;
@@ -928,6 +930,7 @@ footer{
 
 
 }
+
 
 
 

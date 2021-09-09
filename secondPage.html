@@ -135,26 +135,29 @@
         <div id='map' style='width: 195px; height: 200px;'></div>
         </aside>
 
-<!--content page !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+     <!--content page !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
         <div class="container-page-child2">
        <div class="loginform">
-         <h1>ثبت نام  /  ورود به اکانت</h1>
-         <form action="actions.txt" method="get">
-          <label for="email">ایمیل/جیمیل</label>
-          <input type="email" id="email" name="email" autocomplete="email" required placeholder="usemind@yahoo.com">
-          <label for="username">نام کاربری</label>
-          <input type="text" id="username" name="username" autocomplete="username" required placeholder="UseMind">
-          <label for="pass">رمز انتخاب کنید</label>
-          <input type="password" id="pass" name="pass" required placeholder="از رمز های با ایمنی بالا استفاده کنید">
-          <label for="pass">تایید رمز</label>
-          <input type="password" name="pass" id="pass" required>
-          <label for="chek">تمام قوانین مربوط به سایت رو میپذیرم</label>
-          <input type="checkbox" name="chek" id="chek" checked>
-          <input type="submit" value="ثبت نام">
-         </form>
 
-        <div class="inside">
-            <form action="actions.txt" method="get">
+        <div class="element1">ثبت نام
+         <form class="sign-up" action="actions.txt" method="get">
+          <label for="email">ایمیل/جیمیل</label>
+          <input class="input-element1" type="email" id="email" name="email" autocomplete="email" required placeholder="usemind@yahoo.com">
+          <label for="username">نام کاربری</label>
+          <input class="input-element1" type="text" id="username" name="username" autocomplete="username" required placeholder="UseMind">
+          <label for="pass">رمز انتخاب کنید</label>
+          <input class="input-element1" type="password" id="pass" name="pass" required placeholder="از رمز های با ایمنی بالا استفاده کنید">
+          <label for="pass">تایید رمز</label>
+          <input class="input-element1" type="password" name="pass" id="pass" required>
+          <label for="chek">تمام قوانین مربوط به سایت رو میپذیرم</label>
+          <input id="chek" class="input-element1" type="checkbox" name="chek" id="chek" checked>
+          <input class="input-element1" type="submit" value="ثبت نام">
+         </form>
+         </div>
+
+            <div class="element2">ورود
+            <form class="sign-in" action="actions.txt" method="get">
+               
                 <label for="name">نام کاربری</label>
                 <input type="text" name="name" id="name">
                 <label for="passw">رمز ورود</label>
@@ -162,8 +165,7 @@
                 <input type="submit" value="ورود">
             </form>
         </div>
-
-
+       
         </div>
         </div>
 
