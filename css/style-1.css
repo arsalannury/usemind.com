@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -686,137 +687,168 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: nowrap;
-  border-radius: 12px;
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  box-shadow: 25px 25px 50px #949494, -25px -25px 50px #ffffff;
-  height: 60%;
-  width: 50%;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 35px 35px 60px #d9d9d9, -25px -25px 60px #d9d9d9;
+  height: 50%;
+  width: 70%;
 }
 
-.container-page-main .container-page-child2 .loginform .element1 {
-  cursor: pointer;
-  margin: 10px 0 0 0;
-  font-size: 1.1em;
-  transition: all 0.6s ease;
+.container-page-main .container-page-child2 .loginform .containerOne {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  border-radius: 5px;
+  width: 90%;
+  height: 72%;
+  margin: 80px 0 0 0;
 }
 
-.container-page-main .container-page-child2 .loginform .element1 .sign-up {
-  display: none;
-}
-
-.container-page-main .container-page-child2 .loginform .element1:hover {
-  color: #003566;
-}
-
-.container-page-main .container-page-child2 .loginform .element1:hover .sign-up {
+.container-page-main .container-page-child2 .loginform .containerOne .sign-up {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  background-color: #001d3d;
-  padding: 15px;
-  margin: 15px 0 0 0;
-  border-radius: 5px;
+  transition: all 2s ease;
+  background-color: #003566;
+  position: relative;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 20px;
+  width: 50%;
+  height: 100%;
 }
 
-.container-page-main .container-page-child2 .loginform .element1:hover .sign-up label {
-  margin: 40px 0 10px 0;
-  font-weight: bold;
+.container-page-main .container-page-child2 .loginform .containerOne .sign-up .input-element1 {
+  transition: all 0.7s ease;
+  margin: 0 0 15px 0;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: .8em;
+  outline: none;
+  border: none;
+}
+
+.container-page-main .container-page-child2 .loginform .containerOne .sign-up .input-element1:focus {
+  box-shadow: 0 2px 5px #333;
+  padding: 6px;
+}
+
+.container-page-main .container-page-child2 .loginform .containerOne .sign-up label {
+  margin: 0 0 5px 0;
   font-size: .9em;
   color: #fff;
 }
 
-.container-page-main .container-page-child2 .loginform .element1:hover .sign-up input[type=submit] {
-  margin: 30px 0 0 0;
-  padding: 6px 13px;
+.container-page-main .container-page-child2 .loginform .containerOne .sign-up input[type=submit] {
+  transition: all 0.7s ease;
   border: none;
   outline: none;
   cursor: pointer;
-  position: relative;
+  padding: 5px 13px;
 }
 
-.container-page-main .container-page-child2 .loginform .element1:hover .sign-up input[type=submit]::before {
-  content: "\f00c";
+.container-page-main .container-page-child2 .loginform .containerOne .sign-up input[type=submit]:hover {
+  box-shadow: 0 2px 5px #333;
+  padding: 5px 26px;
+}
+
+.container-page-main .container-page-child2 .loginform .containerOne .sign-up::before {
+  content: '\f111';
   font-family: 'font awesome 5 free';
-  color: #333533;
   position: absolute;
   top: 10px;
-  font-size: .7em;
-}
-
-.container-page-main .container-page-child2 .loginform .element1:hover .sign-up #chek {
-  margin: 10px 0 0 0;
-}
-
-.container-page-main .container-page-child2 .loginform .element1:hover .sign-up .input-element1 {
-  padding: 5px;
-  font-size: .8em;
-  border-radius: 6px;
-  outline: none;
-  border: none;
-  transition: all 0.6s ease;
-  box-shadow: 0 0 5px #cfd2cd;
-}
-
-.container-page-main .container-page-child2 .loginform .element1:hover .sign-up .input-element1:focus {
-  box-shadow: 0 1px 5px #cfd2cd;
-  padding: 7px;
-  border-radius: 2px;
-}
-
-.container-page-main .container-page-child2 .loginform .element2 {
-  cursor: pointer;
-  margin: 10px 0 0 0;
-  padding: 0 0 350px 0;
-  font-size: 1.1em;
-  transition: all 0.6s ease;
-}
-
-.container-page-main .container-page-child2 .loginform .element2 .sign-in {
-  display: none;
-}
-
-.container-page-main .container-page-child2 .loginform .element2:hover {
+  right: 15px;
+  font-size: 1em;
   color: #ffc300;
 }
 
-.container-page-main .container-page-child2 .loginform .element2:hover .sign-in {
+.container-page-main .container-page-child2 .loginform .containerOne .sign-up:hover::after {
+  content: 'ثبت نام';
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  background-color: #ffc300;
+  color: #003566;
+  border-radius: 10px;
+  font-size: .8em;
+  padding: 5px 7px;
+}
+
+.container-page-main .container-page-child2 .loginform .containerOne .sign-in {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
   background-color: #ffc300;
-  padding: 15px;
-  margin: 15px 0 0 0;
+  position: relative;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 20px;
+  width: 50%;
+  height: 100%;
 }
 
-.container-page-main .container-page-child2 .loginform .element2:hover .sign-in label {
-  margin: 40px 0 10px 0;
-  font-weight: bold;
+.container-page-main .container-page-child2 .loginform .containerOne .sign-in .input-element2 {
+  transition: all 0.7s ease;
+  margin: 0 0 15px 0;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: .8em;
+  outline: none;
+  border: none;
+}
+
+.container-page-main .container-page-child2 .loginform .containerOne .sign-in .input-element2:focus {
+  box-shadow: 0 1px 4px #333;
+  padding: 6px;
+}
+
+.container-page-main .container-page-child2 .loginform .containerOne .sign-in label {
+  margin: 0 0 5px 0;
   font-size: .9em;
   color: #fff;
 }
 
-.container-page-main .container-page-child2 .loginform .element2:hover .sign-in input[type=submit] {
-  margin: 30px 0 0 0;
-}
-
-.container-page-main .container-page-child2 .loginform .element2:hover .sign-in .input-element2 {
-  padding: 5px;
-  font-size: .8em;
-  border-radius: 6px;
-  outline: none;
+.container-page-main .container-page-child2 .loginform .containerOne .sign-in input[type=submit] {
+  transition: all 0.7s ease;
   border: none;
-  transition: all 0.6s ease;
-  box-shadow: 0 0 5px #cfd2cd;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 22px;
 }
 
-.container-page-main .container-page-child2 .loginform .element2:hover .sign-in .input-element2:focus {
-  box-shadow: 0 1px 5px #cfd2cd;
-  padding: 7px;
-  border-radius: 2px;
+.container-page-main .container-page-child2 .loginform .containerOne .sign-in input[type=submit]:hover {
+  box-shadow: 0 2px 5px #333;
+  padding: 5px 33px;
+}
+
+.container-page-main .container-page-child2 .loginform .containerOne .sign-in::before {
+  content: '\f111';
+  font-family: 'font awesome 5 free';
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  font-size: 1em;
+  color: #003566;
+}
+
+.container-page-main .container-page-child2 .loginform .containerOne .sign-in:hover::after {
+  content: 'ورود به اکانت';
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  background-color: #003566;
+  color: #ffc300;
+  border-radius: 10px;
+  font-size: .8em;
+  padding: 5px 7px;
 }
 
 .container-page-main aside {
