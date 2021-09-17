@@ -851,6 +851,55 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   padding: 5px 7px;
 }
 
+.container-page-main .container-page-child3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #fff;
+  box-shadow: -3px 0 5px #fff, 3px 0 5px #fff;
+  border-radius: 3px;
+  text-align: justify;
+  margin: 0 0 0 10px;
+}
+
+.container-page-main .container-page-child3 .img1 {
+  width: 40%;
+  height: 20%;
+  margin: -30px 0 10px 0;
+  box-shadow: 0 3px 0 #ffc300;
+  border-radius: 5px;
+}
+
+.container-page-main .container-page-child3 .parag-thirdpage {
+  margin: 20px;
+  line-height: 30px;
+}
+
+.container-page-main .container-page-child3 .fig-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container-page-main .container-page-child3 .stars {
+  color: #ffc300;
+  margin: 20px 0 20px 0;
+  padding: 10px;
+}
+
+.container-page-main .container-page-child3 .parag-thirdpage-two {
+  margin: 20px;
+  line-height: 30px;
+}
+
+.container-page-main .container-page-child3 img {
+  width: 30%;
+}
+
 .container-page-main aside {
   background-color: #fff;
   box-shadow: -3px 0 5px #fff, 3px 0 5px #fff;

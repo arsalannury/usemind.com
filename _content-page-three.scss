@@ -1,0 +1,86 @@
+@mixin disp($dirc,$just,$align,$wrap) {
+    display: flex;
+    flex-direction:$dirc;
+    justify-content:$just;
+    align-items:$align;
+    flex-wrap:$wrap;
+};
+@mixin transition($trans) {
+    transition:$trans;
+}
+@mixin box-shadow($box...) {
+    box-shadow: $box;
+}
+$ma : "margin" ;
+$w : "width" ;
+$font : 'font-size' ;
+$bord-rad : 'border-radius' ;
+$hei : 'height' ;
+$padd : 'padding' ;
+
+@function font-s($number){
+ @return  $number
+};
+
+$colors-webSite:(
+color1 : #001d3d ,
+color2 : #003566 ,
+yellow1 : #ffc300 ,
+gray-second : #cfd2cd,
+text-color : #333533 ,
+);
+
+
+.container-page-child3{
+    @include disp(column,center,center,nowrap);
+    background-color:#fff;
+    @include box-shadow(-3px 0 5px #fff,3px 0 5px #fff);
+    #{$bord-rad}:3px;
+    text-align:justify;
+    #{$ma}:0 0 0 10px;
+.img1{
+      #{$w}:40%;
+      #{$hei}:20%;
+      #{$ma}:-30px 0 10px 0;
+      @include box-shadow(0 3px 0 #ffc300);
+      #{$bord-rad}:5px;
+     }
+    .parag-thirdpage{
+        #{$ma}:20px;
+        line-height:30px;
+    }
+   .fig-image{
+       @include disp(row,space-around,center,wrap);
+   }
+   
+   .stars{
+       color:map-get($map:$colors-webSite, $key:yellow1);
+       #{$ma}:20px 0 20px 0;
+       #{$padd}:10px;
+      
+
+   }
+   
+   .parag-thirdpage-two{
+    #{$ma}:20px;
+    line-height:30px;
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    img{
+        width:30%;
+    }
+}

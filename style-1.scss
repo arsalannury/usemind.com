@@ -593,6 +593,7 @@ body{
 // HTML main section !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 .container-page-main{
     @import '_content-page-two.scss';
+    @import '_content-page-three.scss';
     margin-top: 50px;
     display:grid;
     grid-template-columns:0.6fr 3fr;
