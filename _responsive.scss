@@ -1,0 +1,93 @@
+@mixin disp($dirc,$just,$align,$wrap) {
+    display: flex;
+    flex-direction:$dirc;
+    justify-content:$just;
+    align-items:$align;
+    flex-wrap:$wrap;
+};
+@mixin navbar-first-items-main-and-child($top,$right,$width) {
+    position: absolute;
+    top:$top;
+    right:$right;
+    background-color:#fff;
+    #{$bord-rad}:3px;
+    #{$w}:$width;
+    #{$padd}:10px 10px 15px 10px;
+}
+@mixin item-main {
+    #{$font}:.9em;
+    #{$ma}-bottom:10px;
+    #{$padd}:0;
+    &::after{
+       display:none;
+    }
+}
+$colors-webSite:(
+color1 : #001d3d ,
+color2 : #003566 ,
+yellow1 : #ffc300 ,
+gray-main : #fbfbf2 ,
+gray-first : #e5e6e4 ,
+gray-second : #cfd2cd,
+text-color : #333533 ,
+);
+@media screen and (max-width:460px) {
+   body{
+       .above-page-header-navbar{
+           header{
+               .first-line-header{
+
+                   .logo-site{
+                       #{$w}:30%;
+                       #{$hei}:85%;
+                       #{$ma}:-13px -16px 0 0;
+                   }
+                   .header-icon{
+                    #{$ma}:11px 0 0 27px;
+                     i{
+                        #{$font}:.9em;
+                        
+                     }
+                   }
+                   .sign-up{
+                       #{$font}:.8em;
+                   }
+               }
+               .search-toggle{
+                display:none;
+            }
+            nav{
+                #{$ma}:0;
+                ul{
+                    display:none; 
+                }
+            }
+           }
+       }
+   }
+
+
+
+
+    .container-page-main{
+        aside{
+            display:none;
+        }
+
+        .hr1{
+            display:none;
+            }
+            hr{
+                display:none;
+            }
+
+     .container-page-child{
+         .section-content-one{
+             .boxes{
+                 display:none;
+             }
+         }
+     }
+    }
+   
+}

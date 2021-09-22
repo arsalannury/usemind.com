@@ -8,3 +8,8 @@ center : [param.coords.longitude , param.coords.latitude] ,
 zoom : 10
 });
 }
+
+
+// change inner text for sign up-in at  responsive 460px
+const signUp = document.querySelector('.sign-up')
+innerWidth <= 460 ? signUp.innerText = 'حساب کاربری' : signUp.innerText = 'ورود / نام نویسی' ;

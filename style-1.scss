@@ -117,18 +117,9 @@ $colors-webSite:(
 color1 : #001d3d ,
 color2 : #003566 ,
 yellow1 : #ffc300 ,
-yellow2 : #ffd60a ,
-yellow3 : #fcf300 ,
-yellow4 : #ffee32 ,
-blue1 : #072ac8 ,
-blue2 : #1e96fc ,
-blue3 : #a2d6f9 ,
 gray-main : #fbfbf2 ,
 gray-first : #e5e6e4 ,
 gray-second : #cfd2cd,
-gray-y : #d6d6d6 ,
-gray-white : #ededed ,
-gray-x : #efe ,
 text-color : #333533 ,
 );
 
@@ -594,6 +585,7 @@ body{
 .container-page-main{
     @import '_content-page-two.scss';
     @import '_content-page-three.scss';
+
     margin-top: 50px;
     display:grid;
     grid-template-columns:0.6fr 3fr;
@@ -792,10 +784,14 @@ hr{
 #{$ma}:30px 55px 20px 20px;
 #{$w}:90%;
 #{$bord-rad}:5px;
+.caption{
+    #{$font}:.8em;
+    #{$ma}:0 3px 0 0 ;
+}
 form{
     @include disp(row,center,center,nowrap);
     #{$w}:90%;
-    #{$padd}:10px;
+    #{$padd}:10px 0;
     input{
       #{$ma}:0 0 0 20px;
     }
@@ -928,10 +924,9 @@ footer{
     }
     }
 }
-
-
 }
 
+@import '_responsive.scss';
 
 
 

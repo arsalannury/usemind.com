@@ -1234,6 +1234,11 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   border-radius: 5px;
 }
 
+.container-page-main .container-page-child .section-content-four .caption {
+  font-size: .8em;
+  margin: 0 3px 0 0;
+}
+
 .container-page-main .container-page-child .section-content-four form {
   display: flex;
   flex-direction: row;
@@ -1241,7 +1246,7 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   align-items: center;
   flex-wrap: nowrap;
   width: 90%;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .container-page-main .container-page-child .section-content-four form input {
@@ -1435,5 +1440,43 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
 .container-page-main footer .standard .icons a i:hover {
   color: #ffc300;
   transform: translateY(-3px);
+}
+
+@media screen and (max-width: 460px) {
+  body .above-page-header-navbar header .first-line-header .logo-site {
+    width: 30%;
+    height: 85%;
+    margin: -13px -16px 0 0;
+  }
+  body .above-page-header-navbar header .first-line-header .header-icon {
+    margin: 11px 0 0 27px;
+  }
+  body .above-page-header-navbar header .first-line-header .header-icon i {
+    font-size: .9em;
+  }
+  body .above-page-header-navbar header .first-line-header .sign-up {
+    font-size: .8em;
+  }
+  body .above-page-header-navbar header .search-toggle {
+    display: none;
+  }
+  body .above-page-header-navbar header nav {
+    margin: 0;
+  }
+  body .above-page-header-navbar header nav ul {
+    display: none;
+  }
+  .container-page-main aside {
+    display: none;
+  }
+  .container-page-main .hr1 {
+    display: none;
+  }
+  .container-page-main hr {
+    display: none;
+  }
+  .container-page-main .container-page-child .section-content-one .boxes {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style-1.css.map */
