@@ -68,3 +68,5 @@ thirdItem.appendChild(childThirdItem);
 const body = document.body;
 innerWidth <= 768 ? document.body.appendChild(containerDiv) : console.log('false') ;
 
+
+

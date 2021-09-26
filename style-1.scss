@@ -95,7 +95,7 @@ i{
 }
 @mixin hr-style($margin) {
     #{$w}:90%;
-    #{$hei}:4%;
+    #{$hei}:4px;
     #{$ma}:$margin;
     #{$bord-rad}:50%;
     border: none;
@@ -652,14 +652,7 @@ aside{
     position:relative;
     @include disp(column,center,center,nowrap);
     #{$padd}:10px;
-&::after{
-    content:' ';
-    position:absolute;
-    #{$w}:1px;
-    #{$hei}:50px;
-    background-color:#000;
-    right:324px;
-}
+
 }
 .box-text2{
     @include disp(column,center,center,nowrap);
@@ -669,14 +662,7 @@ aside{
     position: relative;
     @include disp(column,center,center,nowrap);
     #{$padd}:10px;
-&::before{
-    content:' ';
-    position:absolute;
-    #{$w}:1px;
-    #{$hei}:50px;
-    background-color:#000;
-    left:326px;
-}
+
 }
 }
 .p-content-one{

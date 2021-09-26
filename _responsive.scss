@@ -205,12 +205,13 @@ $padd : 'padding' ;
          
          .section-content-two{
              #{$w}:90%;
+             #{$hei}:200px;
              #{$ma}:0 auto 0 auto;
              &:hover{
                 transform:translateX(0);
              }
            .img-b{
-               #{$w}:50%;
+               #{$w}:40%;
            }
            .captions{
                &::before{
@@ -221,12 +222,13 @@ $padd : 'padding' ;
          }
          .section-content-th{
             #{$w}:90%;
+            #{$hei}:200px;
             #{$ma}:20px auto 0 auto;
             &:hover{
                transform:translateX(0);
             }
           .img-c{
-              #{$w}:50%;
+              #{$w}:37%;
           }
           .captions{
               &::before{
@@ -289,4 +291,110 @@ $padd : 'padding' ;
          }
      }
    
+}
+@media  screen and (min-width:768.5px) and (max-width:1100px){
+   .container-page-main{
+   .container-page-child{
+       .section-content-one{
+           .boxes{
+               #{$w}:50%;
+               flex-direction:column;
+           }
+           .img-a{
+               #{$hei}:30vh;
+           }
+         }
+
+         .hr1{
+             #{$w}:50%;
+             #{$hei}:.2%;
+         }
+
+         .section-content-two{
+             #{$hei}:26vh;
+             .captions{
+                 &::before{
+                     display:none;
+                 }
+             }
+         }
+
+         .section-content-th{
+             #{$hei}:26vh;
+             #{$ma}:20px auto 0 15px;
+            .captions{
+                &::before{
+                    display:none;
+                }
+            }
+        }
+
+        hr{
+            #{$w}:50%;
+            #{$hei}:.2%;
+        }
+
+        .section-content-four{
+            @include disp(column,space-around,center,nowrap);
+            #{$ma}:30px auto 20px auto;
+            form{
+                @include disp(column,space-around,flex-start,nowrap);
+              label{
+                 #{$ma}:0 0 4px 0;
+             }
+               input{
+                #{$ma}:0 0 4px 0;
+                align-self: stretch;
+              }
+
+              .datalist{
+                  #{$ma}:5px 0 0 0;
+                  align-self: center;
+              }
+
+              input[type = submit]{
+                  #{$ma}:5px 0 0 0;
+                  align-self:center;
+              }
+            }
+         }
+      }
+
+      footer{
+        #{$hei}:250px;
+       .links{
+           #{$hei}:196px;
+       .link1{
+           #{$hei}:inherit;
+         @include disp(column,space-evenly,center,wrap);
+         h3{
+             display:none;
+         }
+         a{
+             #{$font}:.9em;
+         }
+       }
+       .link2{
+           #{$w}:30%;
+           #{$hei}:100%;
+       .standard-logo{
+           #{$w}:50%;
+           #{$ma}:0 20% 0 0;
+       }
+       }
+       }
+       .standard{
+        #{$ma}:0 0 0 0 ;
+       .icons{
+           height:50px;
+           @include disp(row,space-around,center,nowrap);
+       }
+       .standard-cont{
+           .standard-a{
+               #{$font}:.8em;
+           }
+       }
+       }
+    }
+   } 
 }
