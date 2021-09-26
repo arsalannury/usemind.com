@@ -1442,9 +1442,9 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   transform: translateY(-3px);
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 768px) {
   body .above-page-header-navbar header .first-line-header .logo-site {
-    width: 30%;
+    width: 130px;
     height: 85%;
     margin: -13px -16px 0 0;
   }
@@ -1466,6 +1466,106 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   body .above-page-header-navbar header nav ul {
     display: none;
   }
+  body .containerDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    background-color: #001d3d;
+    position: fixed;
+    top: 6%;
+    padding: 20px;
+    width: 5%;
+    border-radius: 2px;
+    color: #fff;
+    opacity: 50%;
+    transition: all .7s ease;
+  }
+  body .containerDiv:hover {
+    opacity: 100%;
+    width: 100%;
+  }
+  body .containerDiv:hover .firstItem {
+    display: inline-flex;
+  }
+  body .containerDiv:hover .secondItem {
+    display: inline-flex;
+  }
+  body .containerDiv:hover .thirdItem {
+    display: inline-flex;
+  }
+  body .containerDiv:hover::before {
+    display: none;
+  }
+  body .containerDiv::before {
+    content: '\f141';
+    position: absolute;
+    font-size: 1em;
+    top: 10px;
+    left: 30%;
+    font-family: 'font awesome 5 free';
+  }
+  body .containerDiv .firstItem {
+    display: none;
+  }
+  body .containerDiv .firstItem .childFirstItem {
+    font-size: .8em;
+    position: relative;
+    transition: all .6s ease;
+  }
+  body .containerDiv .firstItem .childFirstItem:hover {
+    color: #ffc300;
+    cursor: pointer;
+  }
+  body .containerDiv .firstItem .childFirstItem::before {
+    content: '\f406';
+    font-family: 'font awesome 5 free';
+    position: absolute;
+    transition: all .6s ease;
+    top: -15px;
+    right: 10px;
+  }
+  body .containerDiv .secondItem {
+    display: none;
+  }
+  body .containerDiv .secondItem .childSecondItem {
+    font-size: .8em;
+    position: relative;
+    transition: all .6s ease;
+  }
+  body .containerDiv .secondItem .childSecondItem:hover {
+    color: #ffc300;
+    cursor: pointer;
+  }
+  body .containerDiv .secondItem .childSecondItem::before {
+    content: '\f03a';
+    font-family: 'font awesome 5 free';
+    position: absolute;
+    transition: all .6s ease;
+    top: -15px;
+    right: 13px;
+  }
+  body .containerDiv .thirdItem {
+    display: none;
+  }
+  body .containerDiv .thirdItem .childThirdItem {
+    font-size: .8em;
+    position: relative;
+    transition: all .6s ease;
+  }
+  body .containerDiv .thirdItem .childThirdItem:hover {
+    color: #ffc300;
+    cursor: pointer;
+  }
+  body .containerDiv .thirdItem .childThirdItem::before {
+    content: '\f002';
+    font-family: 'font awesome 5 free';
+    position: absolute;
+    transition: all .6s ease;
+    top: -15px;
+    right: 16px;
+  }
   .container-page-main aside {
     display: none;
   }
@@ -1475,8 +1575,105 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   .container-page-main hr {
     display: none;
   }
+  .container-page-main .container-page-child {
+    grid-column: 1/-1;
+    margin: 0 2px 0 2px;
+  }
   .container-page-main .container-page-child .section-content-one .boxes {
     display: none;
+  }
+  .container-page-main .container-page-child .section-content-one .img-a {
+    width: 60%;
+    height: 30vh;
+  }
+  .container-page-main .container-page-child .section-content-one .button {
+    font-size: .7em;
+  }
+  .container-page-main .container-page-child .section-content-two {
+    width: 90%;
+    margin: 0 auto 0 auto;
+  }
+  .container-page-main .container-page-child .section-content-two:hover {
+    transform: translateX(0);
+  }
+  .container-page-main .container-page-child .section-content-two .img-b {
+    width: 50%;
+  }
+  .container-page-main .container-page-child .section-content-two .captions {
+    width: inherit;
+  }
+  .container-page-main .container-page-child .section-content-two .captions::before {
+    display: none;
+  }
+  .container-page-main .container-page-child .section-content-th {
+    width: 90%;
+    margin: 20px auto 0 auto;
+  }
+  .container-page-main .container-page-child .section-content-th:hover {
+    transform: translateX(0);
+  }
+  .container-page-main .container-page-child .section-content-th .img-c {
+    width: 50%;
+  }
+  .container-page-main .container-page-child .section-content-th .captions {
+    width: inherit;
+  }
+  .container-page-main .container-page-child .section-content-th .captions::before {
+    display: none;
+  }
+  .container-page-main .container-page-child .section-content-four {
+    display: none;
+  }
+  .container-page-main .container-page-child .section-content-five .img-e {
+    width: 30%;
+  }
+  .container-page-main .container-page-child .section-content-five .button {
+    font-size: .7em;
+  }
+  .container-page-main .container-page-child .section-content-five .five-content-p {
+    line-height: 28px;
+  }
+  .container-page-main footer {
+    height: 250px;
+  }
+  .container-page-main footer .links {
+    height: 196px;
+  }
+  .container-page-main footer .links .link1 {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .container-page-main footer .links .link1 h3 {
+    display: none;
+  }
+  .container-page-main footer .links .link1 a {
+    font-size: .9em;
+  }
+  .container-page-main footer .links .link2 {
+    width: 30%;
+    height: 100%;
+  }
+  .container-page-main footer .links .link2 .standard-logo {
+    width: 60%;
+    margin: 0 20% 0 0;
+  }
+  .container-page-main footer .standard {
+    margin: 0 0 0 0;
+  }
+  .container-page-main footer .standard .icons {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .container-page-main footer .standard .standard-cont .standard-a {
+    font-size: .8em;
   }
 }
 /*# sourceMappingURL=style-1.css.map */
