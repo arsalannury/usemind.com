@@ -1763,4 +1763,16 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
     font-size: .8em;
   }
 }
+
+@media screen and (min-width: 1101px) and (max-width: 1275px) {
+  .container-page-main .container-page-child .section-content-two .captions::before {
+    display: none;
+  }
+  .container-page-main .container-page-child .section-content-th .captions::before {
+    display: none;
+  }
+  .container-page-main footer .links .link1 h3::after {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style-1.css.map */

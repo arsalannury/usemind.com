@@ -398,3 +398,35 @@ $padd : 'padding' ;
     }
    } 
 }
+@media  screen and (min-width : 1101px) and (max-width : 1275px){
+    .container-page-main{
+        .container-page-child{
+            .section-content-two{
+            .captions{
+                &::before{
+                    display:none;
+                }
+            }
+            }
+            .section-content-th{
+                .captions{
+                    &::before{
+                      display:none;
+                    }
+                }
+            }
+        }
+
+        footer{
+            .links{
+                .link1{
+                    h3{
+                        &::after{
+                            display:none
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
