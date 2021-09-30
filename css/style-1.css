@@ -1864,12 +1864,29 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
     height: 98%;
     margin: 10px;
   }
+  .container-page-child2 .loginform .containerOne .sign-up {
+    justify-content: space-evenly;
+  }
   .container-page-child2 .loginform .containerOne .sign-up:hover:before {
     display: none;
   }
   .container-page-child2 .loginform .containerOne .sign-up:hover::after {
     right: 5px;
     font-size: .7em;
+  }
+  .container-page-child2 .loginform .containerOne .sign-up #lockClose {
+    position: absolute;
+    top: 94%;
+    cursor: pointer;
+    font-size: .9em;
+    color: #ffc300;
+  }
+  .container-page-child2 .loginform .containerOne .sign-up #lockOpen {
+    position: absolute;
+    top: 94%;
+    cursor: pointer;
+    font-size: .9em;
+    color: #ffc300;
   }
   .container-page-child2 .loginform .containerOne .sign-in:hover:before {
     display: none;

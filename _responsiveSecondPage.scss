@@ -5,7 +5,13 @@
     align-items:$align;
     flex-wrap:$wrap;
 };
-
+@mixin locksStyle($top) {
+    position:absolute;
+    top:$top;
+    cursor: pointer;
+    #{$font}:.9em;
+    color: map-get($map:$colors-webSite, $key:yellow1) ;
+ }
 @media screen and (max-width:550px){
     
         .container-page-child2{
@@ -94,6 +100,7 @@
             #{$ma}: 10px;
 
             .sign-up{
+                justify-content:space-evenly;
                 &:hover{
                     &:before{
                         display:none;
@@ -102,6 +109,12 @@
                         right:5px;
                         #{$font}:.7em;
                     }
+                }
+                #lockClose{
+                @include locksStyle(94%);
+                }
+                #lockOpen{
+                @include locksStyle(94%);
                 }
             }
             .sign-in{
