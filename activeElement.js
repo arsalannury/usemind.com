@@ -23,48 +23,68 @@ function showH1(){
 }
 showH1();
 
-// ::::::::::::::::::::::
-// create element for replice child
-// ::::::::::::::::::::::
-const parentForm = document.querySelector('#up-form');
 
-const setPassInput = document.createElement('input');
-setPassInput.setAttribute('type','text');
-setPassInput.id = 'replaceElement';
 
-const setPassInputVerify = setPassInput.cloneNode(true);
-setPassInputVerify.id = 'replaceElementVerify';
 // :::::::::::::::::::::::
 // show or hide set and input  password 
 // :::::::::::::::::::::::
+const parentForm = document.querySelector('#up-form');
 
 const showPassword = {
+
     setPasswordF : document.querySelector('#passF') ,
     setPasswordT : document.querySelector('#passT') ,
     lockClose : document.createElement('i') ,
-    attributeLockClose(){
-        this.lockClose.innerHTML = '<i class="fas fa-lock"></i>';
-        this.lockClose.id = 'lockClose';
-        parentForm.appendChild(this.lockClose);
+    lockOpen : document.createElement('i') ,
+    // ::::::::::::::::::::::
+   // create element for replice child
+  // ::::::::::::::::::::::::
+    setPassInput :  document.createElement('input') ,
+    setPassInputVerify : document.createElement('input') ,
+    attributeLocks(){
+      let close = [
+        this.lockClose.innerHTML = '<i class="fas fa-lock"></i>',
+        this.lockClose.id = 'lockClose',
+        parentForm.appendChild(this.lockClose),
+      ];
+      let open = [
+        this.lockOpen.innerHTML = '<i class="fas fa-lock-open"></i>',
+        this.lockOpen.id = 'lockOpen',
+        parentForm.appendChild(this.lockOpen),
+      ];
     } ,
+    attributes(){
+        this.setPassInput.setAttribute('type','text');
+        this.setPassInput.id = 'replaceElement';
+        this.setPassInputVerify.setAttribute('type','text');
+        this.setPassInputVerify.id = 'replaceElementVerify';
+     } ,
+     styles(){
+         this.lockOpen.style.display = 'none' ;
+     } ,
     chnageDisplayPassword(){
         // ::::::::::
         // click event change childs
         // :::::::::
         this.lockClose.addEventListener('click', () => {
-            parentForm.replaceChild(setPassInput,this.setPasswordF);
-            parentForm.replaceChild(setPassInputVerify,this.setPasswordT);
-            this.lockClose.innerHTML = '<i class="fas fa-lock-open"></i>' ;
+            parentForm.replaceChild(this.setPassInput,this.setPasswordF);
+            parentForm.replaceChild(this.setPassInputVerify,this.setPasswordT);
+            this.lockClose.style.display = 'none';
+            this.lockOpen.style.display = 'inherit';
         })
         // ::::::::::
         // dblclick event change innerHTML and childs
         // ::::::::::
-        this.lockClose.addEventListener('dblclick',() => {
-            parentForm.replaceChild(this.setPasswordF,setPassInput);
-            parentForm.replaceChild(this.setPasswordT,setPassInputVerify);
-            this.lockClose.innerHTML = '<i class="fas fa-lock"></i>'
+        this.lockOpen.addEventListener('click',() => {
+            parentForm.replaceChild(this.setPasswordF,this.setPassInput);
+            parentForm.replaceChild(this.setPasswordT,this.setPassInputVerify);
+            this.lockOpen.style.display = 'none' ;
+            this.lockClose.style.display = 'inherit';
         })
     }
+
 }
-showPassword.attributeLockClose();
+showPassword.attributeLocks();
+showPassword.attributes();
+showPassword.styles();
 showPassword.chnageDisplayPassword();

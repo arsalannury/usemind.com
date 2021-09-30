@@ -1693,6 +1693,14 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   color: #ffc300;
 }
 
+.container-page-child2 .loginform .containerOne .sign-up #lockOpen {
+  position: absolute;
+  top: 92%;
+  cursor: pointer;
+  font-size: .9em;
+  color: #ffc300;
+}
+
 .container-page-child2 .loginform .containerOne .sign-in {
   display: flex;
   flex-direction: column;

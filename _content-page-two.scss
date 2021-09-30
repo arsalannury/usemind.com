@@ -24,6 +24,13 @@
         #{$padd}:6px;
     }
 }
+@mixin locksStyle($top) {
+    position:absolute;
+    top:$top;
+    cursor: pointer;
+    #{$font}:.9em;
+    color: map-get($map:$colors-webSite, $key:yellow1) ;
+ }
 $ma : "margin" ;
 $w : "width" ;
 $font : 'font-size' ;
@@ -124,12 +131,12 @@ text-color : #333533 ,
         }
      }
      #lockClose{
-         position:absolute;
-         top:92%;
-         cursor: pointer;
-         #{$font}:.9em;
-         color: map-get($map:$colors-webSite, $key:yellow1) ;
+        @include locksStyle(92%);
      }
+     #lockOpen{
+       @include locksStyle(92%);
+     }
+    
     }
     .sign-in{
         @include disp(column,center,center,nowrap);
