@@ -15,8 +15,8 @@
         <header>
             <div class="first-line-header">
                 <img src="logo.png" alt="logo main" class="logo-site">
-                <a class="header-icon" href="#"><i class="fas fa-home"></i></a>
-                <a href="secondPage.html" target="_blank" class="sign-up">ورود / نام نویسی</a>
+                <a class="header-icon" href="firstPage.html"><i class="fas fa-home"></i></a>
+                <a href="#" target="_blank" class="sign-up">ورود / نام نویسی</a>
             </div>
 
             <div class="search-toggle">
@@ -140,16 +140,16 @@
        <div class="loginform">
 
         <div class="containerOne">
-         <form class="sign-up" action="actions.txt" method="get">
+         <form id="up-form" class="sign-up" action="actions.txt" method="get">
           <label for="email">ایمیل/جیمیل</label>
           <input class="input-element1" type="email" id="email" name="email" autocomplete="email" required placeholder="usemind@yahoo.com">
           <label for="username">نام کاربری</label>
           <input class="input-element1" type="text" id="username" name="username" autocomplete="username" required placeholder="UseMind">
           <label for="pass">رمز انتخاب کنید</label>
-          <input class="input-element1" type="password" id="pass" name="pass" required placeholder="Arsalan#@noorI">
+          <input class="input-element1" type="password" id="passF" name="pass" required placeholder="Arsalan#@noorI">
           <label for="pass">تایید رمز</label>
-          <input class="input-element1" type="password" name="pass" id="pass" required>
-          <label for="chek">تمام قوانین مربوط به سایت رو میپذیرم</label>
+          <input class="input-element1" type="password" name="pass" id="passT" required placeholder="تایید رمز">
+          <label id="chektext" for="chek">تمام قوانین سایت رو میپذیرم</label>
           <input class="input-element1" type="checkbox" name="chek" id="chek" checked>
           <input class="input-element1" type="submit" value="ثبت نام">
          </form>

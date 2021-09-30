@@ -11,6 +11,19 @@
 @mixin box-shadow($box...) {
     box-shadow: $box;
 }
+@mixin inputElementsStyle {
+    @include transition(all .7s ease);
+    #{$ma}:0 0 15px 0;
+    #{$padd}:4px;
+    #{$bord-rad}:5px;
+    #{$font}:.8em;
+    outline:none;
+    border:none;
+    &:focus{
+        @include box-shadow(0 2px 5px #333);
+        #{$padd}:6px;
+    }
+}
 $ma : "margin" ;
 $w : "width" ;
 $font : 'font-size' ;
@@ -62,19 +75,14 @@ text-color : #333533 ,
         #{$padd}:20px;
         #{$w}:50%;
         #{$hei}:100%;
-      
+        #replaceElement{
+           @include inputElementsStyle();
+           }
+         #replaceElementVerify{
+             @include inputElementsStyle();
+         }
     .input-element1{
-        @include transition(all .7s ease);
-        #{$ma}:0 0 15px 0;
-        #{$padd}:4px;
-        #{$bord-rad}:5px;
-        #{$font}:.8em;
-        outline:none;
-        border:none;
-        &:focus{
-            @include box-shadow(0 2px 5px #333);
-            #{$padd}:6px;
-        }
+       @include inputElementsStyle();
     }
     label{
         #{$ma}:0 0 5px 0;
@@ -115,6 +123,13 @@ text-color : #333533 ,
          #{$padd}: 5px 7px;
         }
      }
+     #lockClose{
+         position:absolute;
+         top:92%;
+         cursor: pointer;
+         #{$font}:.9em;
+         color: map-get($map:$colors-webSite, $key:yellow1) ;
+     }
     }
     .sign-in{
         @include disp(column,center,center,nowrap);
@@ -126,17 +141,7 @@ text-color : #333533 ,
         #{$w}:50%;
         #{$hei}:100%;
         .input-element2{
-            @include transition(all .7s ease);
-            #{$ma}:0 0 15px 0;
-            #{$padd}:4px;
-            #{$bord-rad}:5px;
-            #{$font}:.8em;
-            outline:none;
-            border:none;
-            &:focus{
-                @include box-shadow(0 1px 4px #333);
-                #{$padd}:6px;
-            }
+          @include inputElementsStyle();
         }
         label{
             #{$ma}:0 0 5px 0;
@@ -183,3 +188,4 @@ text-color : #333533 ,
     }
 
   }
+  @import '_responsiveSecondPage.scss';
