@@ -66,6 +66,12 @@ text-color : #333533 ,
                      -25px -25px 60px #d9d9d9;
         #{$hei}:50%;
         #{$w}:70%;
+     .activeElement{
+        top:117px;
+        left:5px;
+        font-weight: bold;
+        filter: blur(.5px);
+       } 
       .containerOne{
         @include disp(row,space-around,flex-start,nowrap);
         #{$bord-rad}:5px;

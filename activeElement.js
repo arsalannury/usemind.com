@@ -4,10 +4,7 @@
 const activeElement = document.createElement('span');
 
 activeElement.style.position = 'absolute';
-activeElement.style.top = '117px';
-activeElement.style.left = '5px';
-activeElement.style.fontWeight = 'bold';
-activeElement.style.filter = 'blur(.5px)';
+activeElement.classList.add('activeElement');
 
 function showH1(){
     if(innerWidth <= 1280 && innerWidth >= 1026){

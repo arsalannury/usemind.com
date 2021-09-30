@@ -1570,6 +1570,13 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   width: 70%;
 }
 
+.container-page-child2 .loginform .activeElement {
+  top: 117px;
+  left: 5px;
+  font-weight: bold;
+  filter: blur(0.5px);
+}
+
 .container-page-child2 .loginform .containerOne {
   display: flex;
   flex-direction: row;
@@ -1894,6 +1901,40 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   .container-page-child2 .loginform .containerOne .sign-in:hover::after {
     left: 5px;
     font-size: .7em;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 975px) {
+  .container-page-child2 .loginform .activeElement {
+    top: 173px;
+  }
+  .container-page-child2 .loginform .containerOne .sign-up:hover::after {
+    right: 3px;
+  }
+  .container-page-child2 .loginform .containerOne .sign-up #chektext {
+    font-size: .8em;
+  }
+  .container-page-child2 .loginform .containerOne .sign-up #lockOpen {
+    top: 94%;
+  }
+  .container-page-child2 .loginform .containerOne .sign-up #lockClose {
+    top: 94%;
+  }
+  .container-page-child2 .loginform .containerOne .sign-in:hover::after {
+    left: 3px;
+  }
+}
+
+@media screen and (min-width: 976px) and (max-width: 1280px) {
+  .container-page-child2 .loginform .activeElement {
+    top: 173px;
+    left: 45px;
+  }
+  .container-page-child2 .loginform .containerOne .sign-up #lockOpen {
+    top: 94%;
+  }
+  .container-page-child2 .loginform .containerOne .sign-up #lockClose {
+    top: 94%;
   }
 }
 

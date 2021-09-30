@@ -134,3 +134,58 @@
     }
 
 }
+@media screen and (min-width:769px) and (max-width:975px) {
+    .container-page-child2{
+        .loginform{
+            .activeElement{
+                top:173px;
+            }
+            .containerOne{
+                .sign-up{
+                    &:hover{
+                        &::after{
+                            right:3px;
+                        }
+                    }
+                #chektext{
+                    #{$font}:.8em;
+                }
+                #lockOpen{
+                    top:94%;
+                    }
+                    #lockClose{
+                    top:94%;
+                    }
+                }
+               .sign-in{
+                   &:hover{
+                       &::after{
+                           left:3px;
+                       }
+                   }
+               }
+            }
+        }
+    }
+}
+@media screen and (min-width:976px) and (max-width:1280px){
+    .container-page-child2{
+        .loginform{
+            .activeElement{
+                top:173px;
+                left:45px;
+             }
+            .containerOne{
+              .sign-up{
+            #lockOpen{
+                top:94%;
+                }
+                #lockClose{
+                top:94%;
+                }
+            }
+
+            }
+        }
+    }
+}
