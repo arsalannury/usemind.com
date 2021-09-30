@@ -51,6 +51,10 @@ text-color : #333533 ,
     }
    .fig-image{
        @include disp(row,space-around,center,wrap);
+       
+    img{
+        width:30%;
+    }
    }
    
    .stars{
@@ -66,21 +70,5 @@ text-color : #333533 ,
     line-height:30px;
    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    img{
-        width:30%;
-    }
 }
+@import '_responsiveThirdPage.scss';

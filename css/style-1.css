@@ -1972,6 +1972,10 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   flex-wrap: wrap;
 }
 
+.container-page-child3 .fig-image img {
+  width: 30%;
+}
+
 .container-page-child3 .stars {
   color: #ffc300;
   margin: 20px 0 20px 0;
@@ -1983,7 +1987,20 @@ body .above-page-header-navbar header nav ul .navbar-fourth-items {
   line-height: 30px;
 }
 
-.container-page-child3 img {
-  width: 30%;
+@media screen and (max-width: 768px) {
+  .container-page-child3 {
+    grid-column: 1/-1;
+    margin: 0;
+  }
+  .container-page-child3 .img1 {
+    width: 50%;
+    margin: 10px 0 10px 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1270px) {
+  .container-page-child3 .img1 {
+    margin: 30px 0 10px 0;
+  }
 }
 /*# sourceMappingURL=style-1.css.map */
