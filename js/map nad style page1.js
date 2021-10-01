@@ -1,5 +1,5 @@
 if(innerWidth >= 900){
-    navigator.geolocation.getCurrentPosition(showLocation)
+navigator.geolocation.getCurrentPosition(showLocation)
 function showLocation(param){
 mapboxgl.accessToken = 'pk.eyJ1IjoiYXJzYWxhbm5uIiwiYSI6ImNrdDRkbXJlbDAxNngydXF5N205b2g5cHMifQ.i7qbyAgmxXijaYVlTlgx2Q';
 var map = new mapboxgl.Map({

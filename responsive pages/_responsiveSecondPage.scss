@@ -13,7 +13,30 @@
     color: map-get($map:$colors-webSite, $key:yellow1) ;
  }
 @media screen and (max-width:550px){
-    
+    body{
+        #up{
+            content:'\f062';
+            font-family:'font awesome 5 free';
+            position:fixed;
+            top: 94%;
+            cursor: pointer;
+            right:5px;
+            #{$font}:.8em;
+            #{$padd}:5px;
+            border-radius:10%;
+            background: #606c88;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            color:#fff;
+            z-index:50;
+            opacity:70%;
+            &:hover{
+                opacity:100%;
+                border-radius:20%;
+                #{$font}:.9em;
+            }
+            }
+    }
         .container-page-child2{
             grid-column:1/-1;
             #{$ma}:0;
@@ -84,7 +107,30 @@
     
 }
 @media screen and (min-width:551px) and (max-width:768px){
-   
+   body{
+    #up{
+        content:'\f062';
+        font-family:'font awesome 5 free';
+        position:fixed;
+        top: 94%;
+        cursor: pointer;
+        right:5px;
+        #{$font}:.8em;
+        #{$padd}:5px;
+        border-radius:10%;
+        background: #606c88;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color:#fff;
+        z-index:50;
+        opacity:70%;
+        &:hover{
+            opacity:100%;
+            border-radius:20%;
+            #{$font}:.9em;
+        }
+        }
+   }
     .container-page-child2{
         height: 60vh;
         grid-column: 1/-1;
